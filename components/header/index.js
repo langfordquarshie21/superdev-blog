@@ -1,7 +1,8 @@
+import { useContext, useEffect, useState } from 'react'
+import { BlogContext } from '../../context/context'
 import Link from 'next/link'
 import Button from '../button'
 import CategoryTabs from '../categoryTabs'
-import { useEffect, useState } from 'react'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
 import PageTitleBanner from '../pageTitleBanner'
@@ -9,6 +10,7 @@ import WriteHeader from './writeHeader'
 
 const Header = ({ pageTitle }) => {
     const [route, setRoute] = useState()
+    const { showDrawer, setShowDrawer } = useContext(BlogContext)
 
     useEffect(() => {
         setRoute(window.location.pathname)
@@ -51,11 +53,13 @@ const Header = ({ pageTitle }) => {
                         <div className='hidden lg:block'>
                             <Button page='/write' label='Write a blog' />
                         </div>
-                        <div className='menu-btn lg:hidden'>
-                            <div />
-                            <div />
-                            <div />
-                        </div>
+                        {!showDrawer
+                            ? <div className='menu-btn lg:hidden' onClick={() => setShowDrawer(true)}>
+                                <div />
+                                <div />
+                                <div />
+                            </div>
+                            : <p onClick={() => setShowDrawer(false)}>Close</p>}
                     </div>
                 </header>
 
@@ -69,6 +73,19 @@ const Header = ({ pageTitle }) => {
                 </div> : null}
 
                 {pageTitle ? <PageTitleBanner title={pageTitle} /> : null}
+
+                {showDrawer
+                    ? <div className='bg-[#00357252] fixed top-0 h-screen w-screen z-10'>
+                        <div className='drawer flex flex-col bg-[#fff] p-5 pt-20'>
+                            <Link href='/' passHref><p className={styles.menuLink}>Home</p></Link>
+                            <Link href='/' passHref><p className={styles.menuLink}>About</p></Link>
+                            <Link href='/' passHref><p className={styles.menuLink}>Posts</p></Link>
+                            <Link href='/' passHref><p className={styles.menuLink}>About</p></Link>
+                            <Button page='/write' label='Write a blog' />
+                        </div>
+                    </div>
+                    : null
+                }
             </div>
         </>
     )
@@ -76,6 +93,7 @@ const Header = ({ pageTitle }) => {
 
 const styles = {
     link: `p-3 cursor-pointer hover:text-brand`,
+    menuLink: `pb-3 cursor-pointer hover:text-brand`,
 }
 
 export default Header

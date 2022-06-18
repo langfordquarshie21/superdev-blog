@@ -29,15 +29,15 @@ const Write = () => {
                         </div>
                     </div>
                     <br /> */}
-                    <div className='flex flex-col lg:flex-row h-[76vh]'>
-                        <div className='flex-1 h-1/2'>
+                    <div className='flex flex-col lg:flex-row h-[76vh] lg:h-full'>
+                        <div className='flex-1 h-1/2 lg:h-full'>
                             <textarea
-                                className='outline-none w-full h-full overflow-y-scroll resize-none'
+                                className='outline-none w-full h-full lg:h-[90vh] overflow-y-scroll resize-none'
                                 onChange={e => setMarkdown(e.target.value)}
                                 placeholder='Write something ✍️ ...' />
                         </div>
                         {markdown
-                            ? <div className='lg:border-l lg:border-l-borderGray lg:border-t-0 border-t border-t-borderGray overflow-y-scroll pt-5 lg:pt-0 lg:pl-5 flex-1 h-1/2'>
+                            ? <div className='lg:border-l lg:border-l-borderGray lg:border-t-0 border-t border-t-borderGray overflow-y-scroll pt-5 lg:pt-0 lg:pl-5 flex-1 h-1/2 lg:h-full'>
                                 <ReactMarkdown
                                     remarkRehypeOptions={{ commonmark: true }}
                                     className="md-viewer">
