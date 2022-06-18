@@ -9,7 +9,7 @@ const Write = () => {
     return (
         <>
             <WriteHeader onPublish={() => console.warn('markdown ->', markdown)} />
-            <BasicLayout>
+            <BasicLayout metaTitle='Write an article'>
                 <div className='flex flex-col lg:flex-row h-[76vh] lg:h-full'>
                     <div className='flex-1 h-1/2 lg:h-full'>
                         <textarea

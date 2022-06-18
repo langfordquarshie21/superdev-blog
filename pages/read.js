@@ -13,7 +13,7 @@ const Read = () => {
     return (
         <>
             <Header />
-            <BasicLayout>
+            <BasicLayout metaTitle={`Read - ${title}`}>
                 <BackPageTitle title={title} />
             </BasicLayout>
         </>

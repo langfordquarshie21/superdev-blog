@@ -13,7 +13,7 @@ const Tag = () => {
     return (
         <>
             <Header />
-            <BasicLayout>
+            <BasicLayout metaTitle={`Tag - ${route}`}>
                 <BackPageTitle title={route} />
             </BasicLayout>
         </>
