@@ -21,7 +21,7 @@ const Header = ({ pageTitle }) => {
                 <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
                     <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
                         <Link href='/'>
-                            <b className='text-brand text-2xl cursor-pointer hover:opacity-50 transition'>superdevvv</b>
+                            <b className='text-brand text-xl cursor-pointer hover:opacity-50 transition'>superdevvv</b>
                         </Link>
                         <div className='hidden lg:block'>
                             <SearchInput />
@@ -43,8 +43,10 @@ const Header = ({ pageTitle }) => {
                                 </Link>
                             </ul>
                         </nav>
-                        <Button label='Write a blog' />
-                        <div className='menu-btn'>
+                        <div className='hidden lg:block'>
+                            <Button label='Write a blog' />
+                        </div>
+                        <div className='menu-btn lg:hidden'>
                             <div />
                             <div />
                             <div />
