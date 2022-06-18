@@ -9,8 +9,7 @@ const Blogs = () => {
             <Header />
             <BasicLayout>
                 <div>
-                    {/* <ul className="grid grid-cols-3"> */}
-                    <ul className="">
+                    <ul className="-mt-10">
                         <BlogCard />
                         <BlogCard />
                         <BlogCard />
@@ -18,8 +17,8 @@ const Blogs = () => {
                     </ul>
                 </div>
             </BasicLayout>
-            <footer className='text-greyText flex items-center justify-center p-10 border-t border-t-borderGray'>
-                &copy; 2022 | All Rights Reserved | superdevv
+            <footer className='text-greyText flex text-center items-center justify-center p-10 border-t border-t-borderGray'>
+                <small>&copy; 2022 | All Rights Reserved | superdevv</small>
             </footer>
         </>
     )

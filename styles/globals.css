@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --brand: #0070f3
+  --brand: #0070f3;
+  --accent: #63f49c;
+
 }
 
 html,
@@ -125,7 +127,7 @@ header {
 } */
 
 ::selection {
-  background: #63f49c;
+  background: var(--accent);
 }
 
 .big-home-text-container {
@@ -134,4 +136,53 @@ header {
   background-image: radial-gradient(#0071f32f 0.75px, transparent 0.75px), radial-gradient(#0071f32f 0.75px, #ffffff 0.75px);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.multiline--2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.multiline--3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.multiline--4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.multiline--5 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.multiline--6 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
