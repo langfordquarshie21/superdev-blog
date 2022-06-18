@@ -10,7 +10,7 @@ const Header = () => {
             <div>
                 <header className="header fixed border-b border-b-borderGray top-0 left-0 w-screen">
                     {/* <header className=""> */}
-                    <div className="p-5 max-w-7xl flex items-center justify-between m-auto">
+                    <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
                         <b className='text-brand text-2xl'>superdevvv</b>
                         <div className={styles.searchBox}>
                             <Image src={search} width={16} alt='search' className='search-icon' />
