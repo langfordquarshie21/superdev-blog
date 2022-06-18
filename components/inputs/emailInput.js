@@ -14,7 +14,7 @@ const EmailInput = () => {
 
 const styles = {
     input: `outline-none bg-[#00000000] ml-2 text-[#000] w-[90%]`,
-    inputContainer: `border border-borderGray bg-[#00000000] rounded-md px-2 py-2 pl-3 flex items-center max-w-[700px]`,
+    inputContainer: `bg-[#fff] rounded-md px-2 py-2 pl-3 flex items-center max-w-[700px]`,
 }
 
 export default EmailInput

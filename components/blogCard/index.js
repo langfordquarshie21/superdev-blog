@@ -37,11 +37,6 @@ const BlogCard = () => {
                     </div>
                     <img className='w-[320px]' src='https://hashnode.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1655321193841%2FUqh2tSGdF.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75' alt='blog title' />
                 </div>
-                {/* <div className="mt-5">
-                    <div className="mb-2">
-                    </div>
-                    <b className="text-[#000]">MongoDB and Vercel: from idea to global fullstack app in seconds</b>
-                </div> */}
             </li>
         </>
     )

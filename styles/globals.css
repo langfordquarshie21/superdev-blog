@@ -117,3 +117,9 @@ header {
   background: rgba(239, 239, 239, 0.838); */
   background: #fff;
 }
+
+/* .gradient-text {
+  background: -webkit-linear-gradient(  var(--brand), blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
