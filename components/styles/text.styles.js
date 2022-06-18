@@ -1,3 +1,4 @@
 export const textStyles = {
-    pageTitle: `text-4xl lg:text-6xl font-medium text-brand`,
+    pageTitle: `text-5xl lg:text-6xl font-medium text-[#000]`,
+    // pageTitle: `text-5xl lg:text-6xl font-medium text-brand`,
 }

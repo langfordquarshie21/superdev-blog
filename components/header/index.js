@@ -59,7 +59,7 @@ const Header = ({ pageTitle }) => {
                     <CategoryTabs />
                 </div> : null}
 
-                : {pageTitle ? <PageTitleBanner title={pageTitle} /> : null}
+                {pageTitle ? <PageTitleBanner title={pageTitle} /> : null}
             </div>
         </>
     )
