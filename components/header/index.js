@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Button from '../button'
 import CategoryTabs from '../categoryTabs'
+import { useEffect, useState } from 'react'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
-import { useEffect, useState } from 'react'
 import PageTitleBanner from '../pageTitleBanner'
-import { textStyles } from '../styles/text.styles'
+import WriteHeader from './writeHeader'
 
 const Header = ({ pageTitle }) => {
     const [route, setRoute] = useState()
@@ -14,6 +13,12 @@ const Header = ({ pageTitle }) => {
     useEffect(() => {
         setRoute(window.location.pathname)
     }, [route])
+
+    if (route === '/write') return (
+        <>
+            <WriteHeader />
+        </>
+    )
 
     return (
         <>
@@ -44,7 +49,7 @@ const Header = ({ pageTitle }) => {
                             </ul>
                         </nav>
                         <div className='hidden lg:block'>
-                            <Button label='Write a blog' />
+                            <Button page='/write' label='Write a blog' />
                         </div>
                         <div className='menu-btn lg:hidden'>
                             <div />
@@ -53,9 +58,6 @@ const Header = ({ pageTitle }) => {
                         </div>
                     </div>
                 </header>
-                {/* <p>Your daily dose of <strike>coffee</strike> code </p> */}
-                {/* <h2>Join 1412 devs and subscribe to my newsletter</h2> */}
-                {/* <p className='my-4'> Hey there 👋 Im Langford a full-stack remote web developer with years of experience, and I'll help you become a web developer with bite-sized dev tips.</p> */}
 
                 {route === '/' ? <div>
                     <PageTitleBanner

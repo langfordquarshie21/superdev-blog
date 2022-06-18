@@ -5,7 +5,7 @@
 :root {
   --brand: #0070f3;
   --accent: #63f49c;
-
+  --grey-bg: #f1f1f1ab
 }
 
 html,
@@ -198,3 +198,53 @@ header {
   width: 100%;
   background: #000;
 }
+
+.md-viewer {
+  white-space: pre-wrap;
+}
+
+.md-viewer a {
+  width: max-content;
+  display: block;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* .md-viewer a:hover::after {
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.md-viewer a::after {
+  background: var(--accent);
+  content: '';
+  display: block;
+  transition: .2s linear;
+  margin: 0;
+  height: 3px;
+  width: 100%;
+} */
+
+.md-viewer pre {
+  background: var(--grey-bg);
+  padding: 10px;
+}
+
+.md-viewer pre code {
+  background: transparent;
+}
+
+.md-viewer code {
+  background: #FFFAE0;
+}
+
+/* .md-viewer h1,
+.md-viewer h2,
+.md-viewer h3,
+.md-viewer h4,
+.md-viewer h5,
+.md-viewer h6 {
+  color: var(--accent);
+} */

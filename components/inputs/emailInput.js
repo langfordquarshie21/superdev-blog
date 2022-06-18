@@ -7,7 +7,7 @@ const EmailInput = () => {
         <div className={styles.inputContainer}>
             <Image src={search} width={23} alt='search' className='search-icon' />
             <input className={styles.input} placeholder='Enter your email' />
-            <Button label='Sign up &rarr;' />
+            <Button action={() => { }} label='Sign up &rarr;' />
         </div>
     )
 }

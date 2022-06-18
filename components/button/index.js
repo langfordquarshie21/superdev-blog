@@ -1,7 +1,14 @@
-const Button = ({ label }) => {
+import Link from "next/link"
+
+const Button = ({ label, page, action }) => {
     return (
         <>
-            <button className={styles.button}>{label}</button>
+            {action ? <button onClick={action} className={styles.button}>{label}</button> : null}
+            {page
+                ? <Link href={page} passHref>
+                    <button className={styles.button}>{label}</button>
+                </Link>
+                : null}
         </>
     )
 }
