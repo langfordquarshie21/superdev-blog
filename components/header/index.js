@@ -20,7 +20,7 @@ const Header = () => {
                         <SearchInput />
                         <nav>
                             <ul className='flex items-center justify-between'>
-                                <Image src={moon} alt='dark theme toggle' width={20} className='theme-icon' />
+                                {/* <Image src={moon} alt='dark theme toggle' width={20} className='theme-icon' /> */}
                                 <Link href="/" passHref>
                                     <p className={styles.link}>Home</p>
                                 </Link>
@@ -33,6 +33,9 @@ const Header = () => {
                                 <Link href="/" passHref>
                                     <p className={styles.link}>Today</p>
                                 </Link>
+                                <Link href="/" passHref>
+                                    <p className={styles.link}>Podcasts</p>
+                                </Link>
                             </ul>
                         </nav>
                         <Button label='Write a blog' />
@@ -42,18 +45,15 @@ const Header = () => {
                 {/* <h2>Join 1412 devs and subscribe to my newsletter</h2> */}
                 {/* <p className='my-4'> Hey there 👋 Im Langford a full-stack remote web developer with years of experience, and I'll help you become a web developer with bite-sized dev tips.</p> */}
 
-                <div className='border-b border-b-borderGray w-screen mt-[78px]'>
+                <div className='big-home-text-container border-b border-b-borderGray w-screen mt-[78px]'>
                     <div className='max-w-7xl  m-auto px-5 py-20'>
                         <div className='max-w-3xl'>
-                            <h1 className="text-6xl font-medium text-[#000] text-brand">Become a Super Devv 🚀</h1>
+                            <h1 className="text-6xl font-medium text-brand">Become a Super Devv 🚀</h1>
                             <p className='mt-5 leading-[30px]'>We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.</p>
                             <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
                                 <Image src={twitter} alt='twitter' />
-                                {/* <div className='m-2' /> */}
                                 <Image src={github} alt='github' />
-                                {/* <div className='m-2' /> */}
                                 <Image src={instagram} alt='instagram' />
-                                {/* <div className='m-2' /> */}
                                 <Image src={linkedin} alt='linkedin' />
                             </div>
                         </div>

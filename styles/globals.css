@@ -123,3 +123,15 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 } */
+
+::selection {
+  background: #63f49c;
+}
+
+.big-home-text-container {
+  background-color: #ffffff;
+  /* opacity: 0.2; */
+  background-image: radial-gradient(#0071f32f 0.75px, transparent 0.75px), radial-gradient(#0071f32f 0.75px, #ffffff 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
