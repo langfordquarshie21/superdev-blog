@@ -9,7 +9,8 @@ const Blogs = () => {
             <Header />
             <BasicLayout>
                 <div>
-                    <ul className="grid grid-cols-3">
+                    {/* <ul className="grid grid-cols-3"> */}
+                    <ul className="">
                         <BlogCard />
                         <BlogCard />
                         <BlogCard />

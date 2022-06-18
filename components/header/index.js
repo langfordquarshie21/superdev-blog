@@ -60,7 +60,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <SubscribeNewsletter />
+                {/* <SubscribeNewsletter /> */}
                 <CategoryTabs />
             </div>
         </>
