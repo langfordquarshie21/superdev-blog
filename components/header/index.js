@@ -44,6 +44,11 @@ const Header = ({ pageTitle }) => {
                             </ul>
                         </nav>
                         <Button label='Write a blog' />
+                        <div className='menu-btn'>
+                            <div />
+                            <div />
+                            <div />
+                        </div>
                     </div>
                 </header>
                 {/* <p>Your daily dose of <strike>coffee</strike> code </p> */}
