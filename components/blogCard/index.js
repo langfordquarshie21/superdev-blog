@@ -36,7 +36,7 @@ const BlogCard = () => {
                         <div className='max-w-3xl'>
                             <b className='lg:text-2xl text-xl font-bold'>MongoDB and Vercel: from idea to global fullstack app in seconds</b>
                             <div className='opacity-50'><small>16 Jun, 2020 | 4 min read | 23K views</small></div>
-                            <p className='mt-5 multiline--6'>Lets build a desktop app with Deno. Yes. A desktop app. No Electron. Actually, lets make it harder on ourselves! lets make a 3D desktop app! Will it be a GOOD desktop app? Of course not! Whose blo…</p>
+                            <p className='mt-5 opacity-70 multiline--6'>Lets build a desktop app with Deno. Yes. A desktop app. No Electron. Actually, lets make it harder on ourselves! lets make a 3D desktop app! Will it be a GOOD desktop app? Of course not! Whose blo…</p>
                         </div>
                         <img className='w-full mt-5 lg:w-[320px]' src='https://hashnode.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1655321193841%2FUqh2tSGdF.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75' alt='blog title' />
                     </div>
