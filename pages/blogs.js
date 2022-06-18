@@ -17,6 +17,9 @@ const Blogs = () => {
                     </ul>
                 </div>
             </BasicLayout>
+            <footer className='text-greyText flex items-center justify-center p-10 border-t border-t-borderGray'>
+                &copy; 2022 | All Rights Reserved | superdevv
+            </footer>
         </>
     )
 }

@@ -1,21 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import search from '../../public/assets/svg/search.svg'
 import moon from '../../public/assets/svg/moon.svg'
 import Button from '../button'
+import CategoryTabs from '../categoryTabs'
+import SubscribeNewsletter from '../subscribeNewsletter'
+import SearchInput from '../inputs/searchInput'
+import twitter from '../../public/assets/svg/twitter.svg'
+import github from '../../public/assets/svg/github.svg'
+import linkedin from '../../public/assets/svg/linkedin.svg'
+import instagram from '../../public/assets/svg/instagram.svg'
 
 const Header = () => {
     return (
         <>
             <div>
-                <header className="header fixed border-b border-b-borderGray top-0 left-0 w-screen">
-                    {/* <header className=""> */}
+                <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
                     <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
                         <b className='text-brand text-2xl'>superdevvv</b>
-                        <div className={styles.searchBox}>
-                            <Image src={search} width={16} alt='search' className='search-icon' />
-                            <input className={styles.input} placeholder='Search posts...' />
-                        </div>
+                        <SearchInput />
                         <nav>
                             <ul className='flex items-center justify-between'>
                                 <Image src={moon} alt='dark theme toggle' width={20} className='theme-icon' />
@@ -41,32 +43,32 @@ const Header = () => {
                 {/* <p className='my-4'> Hey there 👋 Im Langford a full-stack remote web developer with years of experience, and I'll help you become a web developer with bite-sized dev tips.</p> */}
 
                 <div className='border-b border-b-borderGray w-screen mt-[78px]'>
-                    <div className='max-w-7xl  m-auto px-5 py-10'>
-                        <h1 className="text-[#000]">Become a Super Devv 🚀</h1>
-                    </div>
-                </div>
-
-                <div className='border-b border-b-borderGray w-screen'>
-                    <div className='max-w-7xl flex items-center justify-between p-5 m-auto'>
-                        <p className='opacity-30 text-2xl'>Join 1412 devs and subscribe to my newsletter</p>
-                        <div className={styles.searchBox}>
-                            <Image src={search} width={23} alt='search' className='search-icon' />
-                            <input className={styles.input} placeholder='Enter your email' />
-                            <Button label='Sign up' />
+                    <div className='max-w-7xl  m-auto px-5 py-20'>
+                        <div className='max-w-2xl'>
+                            <h1 className="text-5xl font-medium text-[#000]">Become a Super Devv 🚀</h1>
+                            <p className='mt-5 leading-[30px]'>We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.</p>
+                            <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
+                                <Image src={twitter} alt='twitter' />
+                                {/* <div className='m-2' /> */}
+                                <Image src={github} alt='github' />
+                                {/* <div className='m-2' /> */}
+                                <Image src={instagram} alt='instagram' />
+                                {/* <div className='m-2' /> */}
+                                <Image src={linkedin} alt='linkedin' />
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <SubscribeNewsletter />
+                <CategoryTabs />
             </div>
         </>
     )
 }
 
 const styles = {
-    // input: `outline-none ml-2 text-[#000] w-[90%] bg-[#f1f1f1ab]`,
-    // searchBox: `border border-borderGray rounded-md px-2 py-2 flex items-center bg-[#f1f1f1ab] max-w-[400px]`,
-    input: `outline-none ml-2 text-[#000] w-[90%]`,
     link: `p-3 cursor-pointer hover:text-brand`,
-    searchBox: `border border-borderGray rounded-md px-2 py-2 flex items-center max-w-[700px]`,
 }
 
 export default Header
