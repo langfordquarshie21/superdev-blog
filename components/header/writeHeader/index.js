@@ -2,7 +2,7 @@ import Link from "next/link"
 import BackButton from "../../backButton"
 import Button from "../../button"
 
-const WriteHeader = () => {
+const WriteHeader = ({ onPublish }) => {
     return (
         <>
             <div>
@@ -12,7 +12,7 @@ const WriteHeader = () => {
                         <Link href='/'>
                             <b className='text-brand text-xl cursor-pointer hover:opacity-50 transition'>superdevvv</b>
                         </Link>
-                        <Button page='/write' label='Publish' />
+                        <Button action={onPublish} label='Publish' />
                     </div>
                 </header>
             </div>

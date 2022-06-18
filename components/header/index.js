@@ -16,12 +16,6 @@ const Header = () => {
         setRoute(window.location.pathname)
     }, [route])
 
-    if (route === '/write') return (
-        <>
-            <WriteHeader />
-        </>
-    )
-
     return (
         <>
             <div>
