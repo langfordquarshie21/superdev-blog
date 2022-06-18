@@ -5,7 +5,6 @@ import Button from '../button'
 import CategoryTabs from '../categoryTabs'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
-import WriteHeader from './writeHeader'
 import HeroBanner from '../heroBanner'
 
 const Header = () => {
@@ -22,7 +21,7 @@ const Header = () => {
                 <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
                     <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
                         <Link href='/'>
-                            <b className='text-brand text-xl cursor-pointer hover:opacity-50 transition'>superdevvv</b>
+                            <b className='text-brand text-xl cursor-pointer hover:opacity-50 transition'>superdev</b>
                         </Link>
                         <div className='hidden lg:block'>
                             <SearchInput />
@@ -60,7 +59,7 @@ const Header = () => {
                 {route === '/' ? <div>
                     <HeroBanner
                         showSocials={true}
-                        title='Become a Super Devv 🚀'
+                        title='Become a Super Dev 🚀'
                         subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
                     <SubscribeNewsletter />
                     <CategoryTabs />

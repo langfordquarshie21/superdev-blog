@@ -2,9 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const meta = {
-    title: 'Superdev blog ⚡',
+    title: 'Superdev blog⚡',
     description: 'Top notch articles & tutorials on web and software development',
-    image: 'https://res.cloudinary.com/follio/image/upload/v1655560149/i9ovjobz81jwguzexxm8.png'
+    image: 'https://res.cloudinary.com/follio/image/upload/v1655594335/hz6h7qh8iqz6osjvvsa4.png'
   }
 
   return (
