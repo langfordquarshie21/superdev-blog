@@ -5,10 +5,10 @@ import Button from '../button'
 import CategoryTabs from '../categoryTabs'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
-import PageTitleBanner from '../pageTitleBanner'
 import WriteHeader from './writeHeader'
+import HeroBanner from '../heroBanner'
 
-const Header = ({ pageTitle }) => {
+const Header = () => {
     const [route, setRoute] = useState()
     const { showDrawer, setShowDrawer } = useContext(BlogContext)
 
@@ -64,7 +64,7 @@ const Header = ({ pageTitle }) => {
                 </header>
 
                 {route === '/' ? <div>
-                    <PageTitleBanner
+                    <HeroBanner
                         showSocials={true}
                         title='Become a Super Devv 🚀'
                         subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
@@ -72,7 +72,7 @@ const Header = ({ pageTitle }) => {
                     <CategoryTabs />
                 </div> : null}
 
-                {pageTitle ? <PageTitleBanner title={pageTitle} /> : null}
+                {/* {pageTitle ? <PageTitleBanner title={pageTitle} /> : null} */}
 
                 {showDrawer
                     ? <div className='bg-[#00357252] fixed top-0 h-screen w-screen z-10'>

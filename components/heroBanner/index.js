@@ -5,7 +5,7 @@ import github from '../../public/assets/svg/github.svg'
 import linkedin from '../../public/assets/svg/linkedin.svg'
 import instagram from '../../public/assets/svg/instagram.svg'
 
-const PageTitleBanner = ({ title, subtitle, showSocials }) => {
+const HeroBanner = ({ title, subtitle, showSocials }) => {
     return (
         <>
             <div className={styles.main}>
@@ -57,4 +57,4 @@ const styles = {
     wrapper: `max-w-7xl m-auto px-5 pt-5`,
 }
 
-export default PageTitleBanner
+export default HeroBanner

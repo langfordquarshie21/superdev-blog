@@ -3,21 +3,21 @@ import BackPageTitle from "../components/backPageTitle"
 import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
 
-const Read = () => {
-    const [title, setTitle] = useState()
+const Tag = () => {
+    const [route, setRoute] = useState()
 
     useEffect(() => {
-        setTitle(window.location.search.replace('?', '').trim())
-    }, [title])
+        setRoute(window.location.search.replace('?', '').replace('-', ' '))
+    }, [route])
 
     return (
         <>
             <Header />
             <BasicLayout>
-                <BackPageTitle title={title} />
+                <BackPageTitle title={route} />
             </BasicLayout>
         </>
     )
 }
 
-export default Read
+export default Tag
