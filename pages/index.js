@@ -1,7 +1,7 @@
-import Blogs from './blogs'
+import Articles from './articles'
 
 export default function Home() {
   return (
-    <Blogs />
+    <Articles />
   )
 }

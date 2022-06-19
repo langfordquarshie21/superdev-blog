@@ -3,7 +3,7 @@ import BlogCard from "../components/blogCard"
 import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
 
-const Blogs = () => {
+const Articles = () => {
     return (
         <>
             <Header />
@@ -15,11 +15,8 @@ const Blogs = () => {
                     <BlogCard />
                 </ul>
             </BasicLayout>
-            <footer className='text-greyText flex text-center items-center justify-center p-10 border-t border-t-borderGray'>
-                <small>&copy; 2022 | All Rights Reserved | superdevv</small>
-            </footer>
         </>
     )
 }
 
-export default Blogs
+export default Articles

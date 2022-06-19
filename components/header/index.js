@@ -1,92 +1,62 @@
-import { useContext, useEffect, useState } from 'react'
-import { BlogContext } from '../../context/context'
-import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Button from '../button'
-import CategoryTabs from '../categoryTabs'
+import TagTabs from '../TagTabs'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
 import HeroBanner from '../heroBanner'
+import search from '../../public/assets/svg/search.svg'
+import Drawer from '../drawer'
+import Nav from './nav'
+import Logo from '../logo'
+import MenuButton from './menuButton'
+import Link from 'next/link'
 
 const Header = () => {
     const [route, setRoute] = useState()
-    const { showDrawer, setShowDrawer } = useContext(BlogContext)
 
     useEffect(() => {
         setRoute(window.location.pathname)
     }, [route])
 
+    const HeroBannerElement = () => {
+        if (route === '/' || route === '/articles') return (
+            <section>
+                <HeroBanner
+                    showSocials={true}
+                    title='Become a Super Dev 🚀'
+                    subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
+                <SubscribeNewsletter />
+                <TagTabs />
+            </section>
+        )
+        return null
+    }
+
     return (
         <>
-            <div>
-                <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
-                    <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
-                        <Link href='/'>
-                            <b className='text-brand text-xl cursor-pointer hover:opacity-50 transition'>superdev</b>
+            <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
+                <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
+                    <Logo />
+                    <div className='hidden lg:block'>
+                        <SearchInput />
+                    </div>
+                    <Nav />
+                    <div className='hidden lg:block'>
+                        <Button page='/write' label='Write a blog' />
+                    </div>
+                    <div className='lg:hidden flex items-center'>
+                        <Link href='/search' passHref>
+                            <Image src={search} alt='search' />
                         </Link>
-                        <div className='hidden lg:block'>
-                            <SearchInput />
-                        </div>
-                        <nav>
-                            <ul className='hidden lg:flex items-center justify-between'>
-                                {/* <Image src={moon} alt='dark theme toggle' width={20} className='theme-icon' /> */}
-                                <Link href="/" passHref>
-                                    <p className={styles.link}>Home</p>
-                                </Link>
-                                <Link href="/" passHref>
-                                    <p className={styles.link}>Latest</p>
-                                </Link>
-                                <Link href="/" passHref>
-                                    <p className={styles.link}>Snippets</p>
-                                </Link>
-                                <Link href="/" passHref>
-                                    <p className={styles.link}>Podcasts</p>
-                                </Link>
-                            </ul>
-                        </nav>
-                        <div className='hidden lg:block'>
-                            <Button page='/write' label='Write a blog' />
-                        </div>
-                        {!showDrawer
-                            ? <div className='menu-btn lg:hidden' onClick={() => setShowDrawer(true)}>
-                                <div />
-                                <div />
-                                <div />
-                            </div>
-                            : <p onClick={() => setShowDrawer(false)}>Close</p>}
+                        <MenuButton />
                     </div>
-                </header>
-
-                {route === '/' ? <div>
-                    <HeroBanner
-                        showSocials={true}
-                        title='Become a Super Dev 🚀'
-                        subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
-                    <SubscribeNewsletter />
-                    <CategoryTabs />
-                </div> : null}
-
-                {/* {pageTitle ? <PageTitleBanner title={pageTitle} /> : null} */}
-
-                {showDrawer
-                    ? <div className='bg-[#00357252] fixed top-0 h-screen w-screen z-10'>
-                        <div className='drawer flex flex-col bg-[#fff] p-5 pt-20'>
-                            <Link href='/' passHref><p className={styles.menuLink}>Home</p></Link>
-                            <Link href='/' passHref><p className={styles.menuLink}>About</p></Link>
-                            <Link href='/' passHref><p className={styles.menuLink}>Posts</p></Link>
-                            <Link href='/' passHref><p className={styles.menuLink}>About</p></Link>
-                            <Button page='/write' label='Write a blog' />
-                        </div>
-                    </div>
-                    : null
-                }
-            </div>
+                </div>
+            </header>
+            <HeroBannerElement />
+            <Drawer />
         </>
     )
-}
-
-const styles = {
-    link: `p-3 cursor-pointer hover:text-brand`,
-    menuLink: `pb-3 cursor-pointer hover:text-brand`,
 }
 
 export default Header
