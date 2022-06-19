@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Button from '../button'
-import TagTabs from '../TagTabs'
 import SubscribeNewsletter from '../subscribeNewsletter'
 import SearchInput from '../inputs/searchInput'
 import HeroBanner from '../heroBanner'
@@ -11,6 +10,7 @@ import Nav from './nav'
 import Logo from '../logo'
 import MenuButton from './menuButton'
 import Link from 'next/link'
+import TagTabs from '../tagTabs'
 
 const Header = () => {
     const [route, setRoute] = useState()
