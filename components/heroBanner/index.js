@@ -4,6 +4,7 @@ import twitter from '../../public/assets/svg/twitter.svg'
 import github from '../../public/assets/svg/github.svg'
 import linkedin from '../../public/assets/svg/linkedin.svg'
 import instagram from '../../public/assets/svg/instagram.svg'
+import Link from "next/link"
 
 const HeroBanner = ({ title, subtitle, showSocials }) => {
     return (
@@ -15,10 +16,29 @@ const HeroBanner = ({ title, subtitle, showSocials }) => {
                         <p className='mt-5 leading-[30px]'>{subtitle}</p>
                         {showSocials
                             ? <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
-                                <Image src={twitter} alt='twitter' />
-                                <Image src={github} alt='github' />
-                                <Image src={instagram} alt='instagram' />
-                                <Image src={linkedin} alt='linkedin' />
+                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                    <div className="cursor-pointer">
+                                        <Image src={github} alt='github' />
+                                    </div>
+                                </Link>
+
+                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                    <div className="cursor-pointer">
+                                        <Image src={twitter} alt='twitter' />
+                                    </div>
+                                </Link>
+
+                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                    <div className="cursor-pointer">
+                                        <Image src={instagram} alt='instagram' />
+                                    </div>
+                                </Link>
+
+                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                    <div className="cursor-pointer">
+                                        <Image src={linkedin} alt='linkedin' />
+                                    </div>
+                                </Link>
                             </div>
                             : null}
                     </div>
