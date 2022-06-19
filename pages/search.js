@@ -17,9 +17,11 @@ const Search = () => {
         <>
             <BasicLayout metaTitle="🔍 Search">
                 <div className='fixed top-0 left-0 w-screen bg-[#fff] z-20 p-2 px-5 flex items-center justify-center'>
-                    <div className={inputStyles.inputContainer}>
-                        <Image src={search} width={16} alt='search' className='search-icon' />
-                        <input value={query} onChange={e => setQuery(e.target.value)} className={inputStyles.input} placeholder='Search posts...' />
+                    <div className="w-[90%] lg:w-[30%]">
+                        <div className={inputStyles.inputContainer}>
+                            <Image src={search} width={16} alt='search' className='search-icon' />
+                            <input value={query} onChange={e => setQuery(e.target.value)} className={inputStyles.input} placeholder='Search posts...' />
+                        </div>
                     </div>
                     <p className='ml-2 cursor-pointer hover:text-brand' onClick={cancelSearch}>Cancel</p>
                 </div>
