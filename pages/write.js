@@ -10,26 +10,27 @@ const Write = () => {
         <>
             <WriteHeader onPublish={() => console.warn('markdown ->', markdown)} />
             <BasicLayout metaTitle='Write an article'>
-                <div className='flex flex-col lg:flex-row h-[76vh] lg:h-full'>
-                    <div className='flex-1 h-1/2 lg:h-full'>
+                <div className='flex flex-col lg:flex-row h-screen'>
+
+                    <div className='lg:h-screen h-full lg:px-5 pt-5 bg-[#fff] -mt-10 w-full overflow-y-scroll'>
                         <textarea
-                            className='outline-none w-full h-full lg:h-[90vh] overflow-y-scroll resize-none'
+                            className='w-full h-full outline-none resize-none'
                             onChange={e => setMarkdown(e.target.value)}
                             placeholder='Write something ✍️ ...' />
                     </div>
+                    {markdown ? <div className='bg-borderGray p-[.5px] -mt-10' /> : null}
                     {markdown
-                        ? <div className='lg:border-l lg:border-l-borderGray lg:border-t-0 border-t border-t-borderGray overflow-y-scroll pt-5 lg:pt-0 lg:pl-5 flex-1 h-1/2 lg:h-full'>
+                        ? <div className='lg:h-screen h-full lg:px-5 pt-5 bg-[#fff] border-t border-t-borderGray lg:border-0 -mt-10 w-full overflow-y-scroll'>
                             <ReactMarkdown
                                 remarkRehypeOptions={{ commonmark: true }}
                                 className="md-viewer">
                                 {markdown}
                             </ReactMarkdown>
                         </div>
-                        : null
-                    }
-                </div>
-                <div>
-                    {/* <div className='flex items-center justify-between bg-greyBg p-2 px-4 border border-borderGray'>
+                        : null}
+                    <div>
+
+                        {/* <div className='flex items-center justify-between bg-greyBg p-2 px-4 border border-borderGray'>
                         <p>Preview</p>
                         <p>Guide</p>
                         <div className='flex items-center justify-between'>
@@ -45,6 +46,7 @@ const Write = () => {
                         </div>
                     </div>
                     <br /> */}
+                    </div>
                 </div>
             </BasicLayout>
         </>

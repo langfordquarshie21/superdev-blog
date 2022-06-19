@@ -5,7 +5,8 @@
 :root {
   --brand: #0070f3;
   --accent: #63f49c;
-  --grey-bg: #f1f1f1ab
+  --grey-bg: #f1f1f1ab;
+  --border-gray: #eaeaea;
 }
 
 html,
@@ -205,11 +206,13 @@ header {
 }
 
 .md-viewer a {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   display: block;
-  color: var(--accent);
+  color: var(--brand);
   text-decoration: underline;
-  display: contents;
+  display: unset;
 }
 
 .md-viewer a:hover {
@@ -238,6 +241,12 @@ header {
   height: 3px;
   width: 100%;
 } */
+
+.md-viewer img,
+.md-viewer video {
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+}
 
 .md-viewer pre {
   background: var(--grey-bg);
