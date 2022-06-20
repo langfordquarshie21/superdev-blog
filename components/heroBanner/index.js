@@ -16,27 +16,27 @@ const HeroBanner = () => {
                         <p className='mt-5 leading-[30px]'>
                             Hello there 👋.I&apos; m Langford, a full-stack web and software developer. I&apos; m also a Technical Writer and Content Creator ✍️. And I&apos;m here to help you grow from web developer to a <span className="gradient">Super dev</span>
                         </p>
-                        <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
-                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                <div className="cursor-pointer">
+                        <div className='flex items-center w-full max-w-[170px] justify-between mt-5'>
+                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21'>
+                                <div className="cursor-pointer opacity-50 hover:opacity-100">
                                     <Image src={github} alt='github' />
                                 </div>
                             </Link>
 
-                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                <div className="cursor-pointer">
+                            <Link passHref target='_blank' href='https://twitter.com/langford_dev'>
+                                <div className="cursor-pointer opacity-50 hover:opacity-100">
                                     <Image src={twitter} alt='twitter' />
                                 </div>
                             </Link>
 
-                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                <div className="cursor-pointer">
+                            <Link passHref target='_blank' href='https://linkedin.com/in/langford-dev'>
+                                <div className="cursor-pointer opacity-50 hover:opacity-100">
                                     <Image src={linkedin} alt='linkedin' />
                                 </div>
                             </Link>
 
-                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                <div className="cursor-pointer">
+                            <Link passHref target='_blank' href='https://instagram.com/langford_dev'>
+                                <div className="cursor-pointer opacity-50 hover:opacity-100">
                                     <Image src={instagram} alt='instagram' />
                                 </div>
                             </Link>
