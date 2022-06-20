@@ -203,6 +203,7 @@ header {
 
 .md-viewer {
   white-space: pre-wrap;
+  line-height: 30px;
 }
 
 .md-viewer a {

@@ -10,8 +10,6 @@ const Write = () => {
 
     const uploadFile = async () => {
         try {
-            console.warn("uploading file", typeof banner)
-
             const data = new FormData()
             data.append("file", banner)
             data.append("upload_preset", process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET)
@@ -21,13 +19,20 @@ const Write = () => {
                 body: data
             })
             const resData = await res.json()
-            console.warn("done uploading file🎉", resData.url)
             return resData.url
         }
         catch (e) {
             console.error('upload error', e.message)
             return undefined
         }
+    }
+
+    const getReadingTime = () => {
+        const text = document.querySelector(".md-viewer").innerText;
+        const wpm = 225;
+        const words = text.trim().split(/\s+/).length;
+        const time = Math.ceil(words / wpm);
+        return time
     }
 
     const addPost = async () => {
@@ -48,7 +53,7 @@ const Write = () => {
                 banner: await uploadFile(),
                 title: title,
                 search_title: _searchTitle,
-                read_length: 5,
+                read_length: getReadingTime(),
                 keywords: _keywords,
                 content: markdown,
                 reads: 0,
