@@ -1,7 +1,8 @@
 import Head from "next/head"
+import { defaultMeta } from "../../content"
 import Footer from "../footer"
 
-const BasicLayout = ({ children, metaDescription = '', metaImg = '', metaTitle = 'Superdev blog⚡', hideFooter = false }) => {
+const BasicLayout = ({ children, metaDescription = defaultMeta.description, metaImg = defaultMeta.image, metaTitle = defaultMeta.title, hideFooter = false }) => {
     return (
         <>
             <Head>

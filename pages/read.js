@@ -8,7 +8,8 @@ const Read = () => {
     const [title, setTitle] = useState('')
     const [article, setArticle] = useState({
         title: '',
-        banner: ''
+        banner: '',
+        description: ''
     })
 
     const getPost = async () => {
@@ -28,7 +29,7 @@ const Read = () => {
             <Header />
             <BasicLayout
                 metaTitle={article.title}
-                metaDescription={article.title}
+                metaDescription={article.description}
                 metaImg={article.banner}
             >
                 <div>

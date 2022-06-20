@@ -14,3 +14,9 @@ export const tagTabs = [
     'JavaScript',
     'Internet'
 ]
+
+export const defaultMeta = {
+    title: 'Superdev blog⚡',
+    description: 'Top notch articles & tutorials on web and software development',
+    image: 'https://res.cloudinary.com/follio/image/upload/v1655594335/hz6h7qh8iqz6osjvvsa4.png'
+}
