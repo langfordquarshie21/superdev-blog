@@ -12,8 +12,8 @@ const BasicLayout = ({ children, metaDescription = '', metaImg = '', metaTitle =
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:title" content={metaTitle} />
                 <meta property="og:image" content={metaImg} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@yourname" />
+                <meta name="twitter:card" content={metaImg} />
+                <meta name="twitter:site" content="@langford_dev" />
                 <meta name="twitter:title" content={metaTitle} />
                 <meta name="twitter:description" content={metaDescription} />
                 <meta name="twitter:image" content={metaImg} />
