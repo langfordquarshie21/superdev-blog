@@ -22,10 +22,7 @@ const Header = () => {
     const HeroBannerElement = () => {
         if (route === '/' || route === '/articles') return (
             <section>
-                <HeroBanner
-                    showSocials={true}
-                    title='Become a Super Dev ⚡'
-                    subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
+                <HeroBanner />
                 <SubscribeNewsletter />
                 <TagTabs />
             </section>

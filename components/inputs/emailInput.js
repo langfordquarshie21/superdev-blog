@@ -13,7 +13,7 @@ const EmailInput = () => {
 }
 
 const styles = {
-    inputContainer: `bg-[#fff] rounded-md px-2 py-2 pl-3 flex items-center w-full lg:max-w-[400px]`,
+    inputContainer: `bg-[#fff] rounded-full px-2 py-2 pl-3 flex items-center w-full lg:max-w-[400px]`,
     input: `outline-none bg-[#00000000] ml-2 text-[#000] w-[90%]`,
 }
 

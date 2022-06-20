@@ -14,7 +14,7 @@ const Button = ({ label, page, action }) => {
 }
 
 const styles = {
-    button: `bg-[#000] transition text-[#fff] p-2 px-4 whitespace-nowrap rounded-md border border-[#000] hover:text-[#000] hover:bg-[#fff]`,
+    button: `bg-brand transition text-[#fff] p-2 px-4 whitespace-nowrap rounded-full border border-brand hover:text-brand hover:bg-[#fff]`,
 }
 
 export default Button

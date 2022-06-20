@@ -5,6 +5,8 @@ import BackButton from "../components/backButton"
 import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
 import ReadBlogShimmer from "../components/shimmers/readBlogShimmer"
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
 const Read = () => {
     const [title, setTitle] = useState('')
@@ -34,6 +36,13 @@ const Read = () => {
         getPost()
     }, [])
 
+    useEffect(() => {
+        document.querySelectorAll('pre code').forEach((el) => {
+            hljs.highlightAll(el);
+        })
+    }, [article])
+
+
     return (
         <>
             <Header />
@@ -49,11 +58,13 @@ const Read = () => {
                         <br />
                         <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
                         <img src={article.banner} alt={article.title} className='mb-20 border border-borderGray rounded-md' />
-                        <ReactMarkdown
-                            remarkRehypeOptions={{ commonmark: true }}
-                            className="md-viewer lg:text-xl text-[17px]">
-                            {article.content}
-                        </ReactMarkdown>
+                        {article.content
+                            ? <ReactMarkdown
+                                remarkRehypeOptions={{ commonmark: true }}
+                                className="md-viewer lg:text-xl text-[17px]">
+                                {article.content}
+                            </ReactMarkdown>
+                            : null}
                         <ReadBlogShimmer show={loading} />
                     </div>
                 </div>

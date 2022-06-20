@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --brand: #0070f3;
+  --brand: #4875F7;
+  --selection: #63f49c;
   --accent: #63f49c;
+  --link: #5F4CF1;
   --grey-bg: #f1f1f1ab;
   --border-gray: #eaeaea;
-  --secondary: #FF5722;
+  --secondary: #5F4CF1;
 }
 
 html,
@@ -20,6 +22,16 @@ body {
   scroll-behavior: smooth;
   /* background: var(--grey-bg); */
   /* color: #999999; */
+}
+
+.newsletter {
+  background: linear-gradient(45deg, var(--secondary), var(--brand));
+}
+
+.gradient {
+  background: -webkit-linear-gradient(45deg, var(--brand), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a {
@@ -131,7 +143,7 @@ header {
 } */
 
 ::selection {
-  background: var(--accent);
+  background: var(--selection);
 }
 
 .big-home-text-container {
@@ -212,7 +224,7 @@ header {
   width: -moz-min-content;
   width: min-content;
   display: block;
-  color: var(--brand);
+  color: var(--link);
   text-decoration: underline;
   display: unset;
 }
@@ -266,6 +278,7 @@ header {
 
 .md-viewer pre {
   background: var(--grey-bg);
+  border-radius: 10px;
   padding: 10px;
 }
 

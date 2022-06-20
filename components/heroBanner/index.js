@@ -6,68 +6,44 @@ import linkedin from '../../public/assets/svg/linkedin.svg'
 import instagram from '../../public/assets/svg/instagram.svg'
 import Link from "next/link"
 
-const HeroBanner = ({ title, subtitle, showSocials }) => {
+const HeroBanner = () => {
     return (
         <>
             <div className={styles.main}>
                 <div className={styles.wrapper}>
                     <div className='max-w-3xl'>
-                        <h1 className={textStyles.pageTitle}>{title}</h1>
-                        <p className='mt-5 leading-[30px]'>{subtitle}</p>
-                        {showSocials
-                            ? <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
-                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                    <div className="cursor-pointer">
-                                        <Image src={github} alt='github' />
-                                    </div>
-                                </Link>
+                        <h1 className={textStyles.pageTitle}>Become a <span className="gradient">Super Dev</span></h1>
+                        <p className='mt-5 leading-[30px]'>
+                            Hello there 👋.I&apos; m Langford, a full-stack web and software developer. I&apos; m also a Technical Writer and Content Creator ✍️. And I&apos;m here to help you grow from web developer to a <span className="gradient">Super dev</span>
+                        </p>
+                        <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
+                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                <div className="cursor-pointer">
+                                    <Image src={github} alt='github' />
+                                </div>
+                            </Link>
 
-                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                    <div className="cursor-pointer">
-                                        <Image src={twitter} alt='twitter' />
-                                    </div>
-                                </Link>
+                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                <div className="cursor-pointer">
+                                    <Image src={twitter} alt='twitter' />
+                                </div>
+                            </Link>
 
-                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                    <div className="cursor-pointer">
-                                        <Image src={instagram} alt='instagram' />
-                                    </div>
-                                </Link>
+                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                <div className="cursor-pointer">
+                                    <Image src={linkedin} alt='linkedin' />
+                                </div>
+                            </Link>
 
-                                <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
-                                    <div className="cursor-pointer">
-                                        <Image src={linkedin} alt='linkedin' />
-                                    </div>
-                                </Link>
-                            </div>
-                            : null}
+                            <Link passHref target='_blank' href='https://github.com/langfordquarshie21/superdev-blog'>
+                                <div className="cursor-pointer">
+                                    <Image src={instagram} alt='instagram' />
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            {/* {route === '/'
-                ? <div className={styles.main}>
-                    <div className={styles.wrapper}>
-                        <div className='max-w-3xl'>
-                            <h1 className={textStyles.pageTitle}>{title}</h1>
-                            <p className='mt-5 leading-[30px]'>{subtitle}</p>
-                        </div>
-                    </div>
-                </div>
-                : <div className='big-home-text-container border-b border-b-borderGray w-screen mt-[50px]'>
-                    <div className='max-w-7xl m-auto px-5 py-20'>
-                        <div className='max-w-3xl'>
-                            <h1 className={textStyles.pageTitle}>Become a Super Devv 🚀</h1>
-                            <p className='mt-5 leading-[30px]'>We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.</p>
-                            <div className='flex items-center w-full max-w-[170px] justify-between mt-5 opacity-50'>
-                                <Image src={twitter} alt='twitter' />
-                                <Image src={github} alt='github' />
-                                <Image src={instagram} alt='instagram' />
-                                <Image src={linkedin} alt='linkedin' />
-                            </div>
-                        </div>
-                    </div>
-                </div>} */}
         </>
     )
 }
