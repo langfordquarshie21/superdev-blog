@@ -24,7 +24,7 @@ const Header = () => {
             <section>
                 <HeroBanner
                     showSocials={true}
-                    title='Become a Super Dev 🚀'
+                    title='Become a Super Dev ⚡'
                     subtitle='We focus on industry leading platforms so that you can be prepared for your next skill. Then we teach all we can about them.' />
                 <SubscribeNewsletter />
                 <TagTabs />
