@@ -31,8 +31,8 @@ const Read = () => {
                         <br />
                         <br />
                         <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
-                        <img src={article.banner} className='mb-20' />
                         {/* <BackPageTitle title={title.split('-').join(' ')} /> */}
+                        <img src={article.banner} className='mb-20' />
                         <ReactMarkdown
                             remarkRehypeOptions={{ commonmark: true }}
                             className="md-viewer">
