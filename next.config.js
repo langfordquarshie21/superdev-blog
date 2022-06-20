@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['langfordk.hashnode.dev']
+    domains: [
+      'langfordk.hashnode.dev',
+      'res.cloudinary.com',
+    ]
   }
 }
 

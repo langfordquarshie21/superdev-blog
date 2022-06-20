@@ -5,13 +5,94 @@ import BasicLayout from "../components/layout/basicLayout"
 
 const Write = () => {
     const [markdown, setMarkdown] = useState()
+    const [title, setTitle] = useState()
+    const [banner, setBanner] = useState()
+
+    const uploadFile = async () => {
+        try {
+            console.warn("uploading file", typeof banner)
+
+            const data = new FormData()
+            data.append("file", banner)
+            data.append("upload_preset", process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET)
+            data.append("cloud_name", process.env.NEXT_PUBLIC_CLOUD_NAME)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}`, {
+                method: "POST",
+                body: data
+            })
+            const resData = await res.json()
+            console.warn("done uploading file🎉", resData.url)
+            return resData.url
+        }
+        catch (e) {
+            console.error('upload error', e.message)
+            return undefined
+        }
+    }
+
+    const addPost = async () => {
+        try {
+
+            let _searchTitle
+            let _keywords = []
+
+            title.split(' ').forEach(word => {
+                _keywords.push(word.toLowerCase())
+            })
+
+            _searchTitle = _keywords.join().replaceAll(',', '-')
+
+            const postData = {
+                id: Date.now(),
+                timestamp: Date().substring(4, 15),
+                banner: await uploadFile(),
+                title: title,
+                search_title: _searchTitle,
+                read_length: 5,
+                keywords: _keywords,
+                content: markdown,
+                reads: 0,
+                views: 0,
+                writer: {
+                    name: 'Langford Kwabena',
+                    avatar: '',
+                    socials: {
+                        facebook: '',
+                        github: '',
+                        instagram: '',
+                        twitter: '',
+                    }
+                },
+            }
+
+            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/add-post', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(postData)
+            })
+
+            let data = await res.json()
+
+            console.log(data)
+
+            setMarkdown('')
+            setTitle('')
+
+        } catch (e) {
+            console.log(e.message)
+        }
+    }
 
     return (
         <>
-            <WriteHeader onPublish={() => console.warn('markdown ->', markdown)} />
+            <WriteHeader onPublish={addPost} />
+            <div className='max-w-7xl m-auto p-5 lg:p-10 py-0 flex flex-col'>
+                <input onChange={e => setTitle(e.target.value)} placeholder='Post title' className='mb-10 outline-none mt-[100px]' />
+                <input type='file' onChange={e => setBanner(e.target.files[0])} accept='image/*' />
+            </div>
+
             <BasicLayout metaTitle='Write an article'>
                 <div className='flex flex-col lg:flex-row h-screen'>
-
                     <div className='lg:h-screen h-full lg:px-5 pt-5 bg-[#fff] -mt-10 w-full overflow-y-scroll'>
                         <textarea
                             className='w-full h-full outline-none resize-none'
@@ -21,6 +102,9 @@ const Write = () => {
                     {markdown ? <div className='bg-borderGray p-[.5px] -mt-10' /> : null}
                     {markdown
                         ? <div className='lg:h-screen h-full lg:px-5 pt-5 bg-[#fff] border-t border-t-borderGray lg:border-0 -mt-10 w-full overflow-y-scroll'>
+                            {banner
+                                ? <img className='mb-20' src={URL.createObjectURL(banner)} alt={title} />
+                                : null}
                             <ReactMarkdown
                                 remarkRehypeOptions={{ commonmark: true }}
                                 className="md-viewer">
