@@ -3,9 +3,11 @@ import ReactMarkdown from "react-markdown"
 import BackButton from "../components/backButton"
 import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
+import ReadBlogShimmer from "../components/shimmers/readBlogShimmer"
 
 const Read = () => {
     const [title, setTitle] = useState('')
+    const [loading, setLoading] = useState(true)
     const [article, setArticle] = useState({
         title: '',
         banner: '',
@@ -13,11 +15,18 @@ const Read = () => {
     })
 
     const getPost = async () => {
-        let _title = window.location.search.replace('?', '')
-        setTitle(_title)
-        let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-post/' + _title)
-        let data = await res.json()
-        setArticle(data.payload)
+        try {
+            let _title = window.location.search.replace('?', '')
+            setTitle(_title)
+            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-post/' + _title)
+            let data = await res.json()
+            setArticle(data.payload)
+            showLoader(false)
+        }
+
+        catch (e) {
+            setLoading(false)
+        }
     }
 
     useEffect(() => {
@@ -33,7 +42,6 @@ const Read = () => {
                 metaImg={article.banner}
             >
                 <div>
-                    {/* <BackPageTitle title={title.split('-').join(' ')} /> */}
                     <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20">
                         <BackButton />
                         <br />
@@ -45,6 +53,7 @@ const Read = () => {
                             className="md-viewer lg:text-xl text-[17px]">
                             {article.content}
                         </ReactMarkdown>
+                        <ReadBlogShimmer show={loading} />
                     </div>
                 </div>
             </BasicLayout>
