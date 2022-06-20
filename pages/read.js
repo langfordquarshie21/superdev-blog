@@ -39,7 +39,7 @@ const Read = () => {
                         <br />
                         <br />
                         <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
-                        <img src={article.banner} className='mb-20 border border-borderGray rounded-md' />
+                        <img src={article.banner} alt={article.title} className='mb-20 border border-borderGray rounded-md' />
                         <ReactMarkdown
                             remarkRehypeOptions={{ commonmark: true }}
                             className="md-viewer lg:text-xl text-[17px]">
