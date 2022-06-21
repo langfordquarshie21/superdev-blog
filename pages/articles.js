@@ -13,8 +13,11 @@ const Articles = () => {
         try {
             let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-posts')
             let data = await res.json()
+            let _posts
             if (!data.status) return
-            setPosts(data.payload)
+            _posts = data.payload
+            _posts.reverse()
+            setPosts(_posts)
             setLoading(false)
         }
 
