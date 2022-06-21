@@ -19,7 +19,6 @@ const Articles = () => {
             _posts.reverse()
             setPosts(_posts)
             setLoading(false)
-            console.log(_posts[0])
         }
 
         catch (e) {

@@ -1,20 +1,15 @@
+import { useContext, useState } from "react"
+import { BlogContext } from "../context/context"
 import Image from "next/image"
-import { useContext, useEffect, useState } from "react"
 import BlogCard from "../components/blogCard"
 import BasicLayout from "../components/layout/basicLayout"
 import BlogCardShimmer from "../components/shimmers/blogCardShimmer"
-import { inputStyles } from "../components/styles/input.styles"
-import { BlogContext } from "../context/context"
 import search from '../public/assets/svg/search.svg'
 
 const Search = () => {
-    const { setQuery, query } = useContext(BlogContext)
+    const { setQuery, query, formatSearchQuery, cancelSearch } = useContext(BlogContext)
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
-
-    const cancelSearch = () => {
-        window.history.back()
-    }
 
     const searchPosts = async () => {
         try {
@@ -22,7 +17,7 @@ const Search = () => {
 
             setLoading(true)
 
-            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/search-posts/' + capitalizeString(query))
+            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/search-posts/' + formatSearchQuery(query))
             let data = await res.json()
             if (!data.status) return
             setPosts(data.payload)
@@ -33,16 +28,6 @@ const Search = () => {
             console.warn(e.message)
             setLoading(false)
         }
-    }
-
-    const capitalizeString = (str) => {
-        let _keywords = []
-
-        str.split(' ').forEach(word => {
-            _keywords.push(word.toLowerCase())
-        })
-
-        return _keywords.join().replaceAll(',', '-')
     }
 
     return (
