@@ -12,7 +12,7 @@ const BlogCard = ({ post }) => {
                             <div className='opacity-50'><small>{post.timestamp} • {post.read_length} min read • {post.views} views</small></div>
                             <p className='mt-5 opacity-50 leading-[30px] multiline--4'>{post.content}</p>
                         </div>
-                        <img className='w-full mt-5 lg:w-[320px]' src={post.banner} alt={post.title} />
+                        <img className='w-full mt-5 lg:w-[320px] rounded-md border border-borderGray' src={post.banner} alt={post.title} />
                     </div>
                 </Link>
             </li>

@@ -61,7 +61,7 @@ const Read = () => {
                         {article.content
                             ? <ReactMarkdown
                                 remarkRehypeOptions={{ commonmark: true }}
-                                className="md-viewer lg:text-xl text-[17px]">
+                                className="md-viewer lg:text-xl text-[17px] pb-56">
                                 {article.content}
                             </ReactMarkdown>
                             : null}

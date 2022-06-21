@@ -38,6 +38,12 @@ const Write = () => {
     const addPost = async () => {
         try {
 
+            let conf = window.prompt("Enter passcode to share article")
+            if (conf !== "passw0rd?") {
+                alert('Wrong passcode')
+                return
+            }
+
             let _searchTitle
             let _keywords = []
 

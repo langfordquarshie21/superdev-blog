@@ -36,17 +36,6 @@ const Articles = () => {
                         return <BlogCard post={post} key={i} />
                     })}
                 </ul>
-
-                {/* <div className="flex">
-                    <div>
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                    </div>
-                    <div className="w-full h-full p-20 shimmer" />
-                </div> */}
-
                 <BlogCardShimmer show={loading} />
             </BasicLayout>
         </>
