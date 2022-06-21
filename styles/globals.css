@@ -274,6 +274,7 @@ header {
 .md-viewer video {
   border: 1px solid var(--border-gray);
   border-radius: 10px;
+  width: 100%;
 }
 
 .md-viewer pre {

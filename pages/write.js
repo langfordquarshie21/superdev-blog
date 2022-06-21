@@ -121,8 +121,6 @@ const Write = () => {
         }
     }
 
-    // if (loading) return <WriteHeader />
-
     return (
         <>
             {loading
@@ -132,7 +130,7 @@ const Write = () => {
 
             {showModal && !loading
                 ? <div className={modalStyles.modalWrapper}>
-                    <div className='bg-[#fff] p-5 rounded-xl flex flex-col'>
+                    <div className='bg-[#fff] p-5 rounded-xl w-full m-5 max-w-[500px] flex flex-col'>
                         <b className='cursor-pointer mb-5' onClick={() => setShowModal(false)}>Close &times;</b>
                         <p>Tags</p>
                         <input value={tags} className='outline p-3 py-2 rounded-md my-10 mt-3 border border-borderGray outline-none' onChange={e => setTags(e.target.value)} placeholder='Tech,web3,HTML' />

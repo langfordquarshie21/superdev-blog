@@ -12,8 +12,8 @@ const HeroBanner = () => {
             <div className={styles.main}>
                 <div className={styles.wrapper}>
                     <div className='max-w-3xl'>
-                        <h1 className={textStyles.pageTitle}>Become a <span className="gradient">Super Dev</span></h1>
-                        <p className='mt-5 leading-[30px]'>
+                        <h1 className={textStyles.pageTitle}>Grow from a dev to a <span className="gradient">Super dev</span></h1>
+                        <p className='mt-5 leading-[30px] opacity-60'>
                             Hello there 👋.I&apos; m Langford, a full-stack web and software developer. I&apos; m also a Technical Writer and Content Creator ✍️. And I&apos;m here to help you grow from web developer to a <span className="gradient">Super dev</span>
                         </p>
                         <div className='flex items-center w-full max-w-[170px] justify-between mt-5'>

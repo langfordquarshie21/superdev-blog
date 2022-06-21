@@ -1,7 +1,7 @@
 const ReadBlogShimmer = ({ show }) => {
     if (show) return (
         <>
-            <section>
+            <section className="-mt-20">
                 <div className="flex flex-wrap -mb-10">
                     <div className="w-[80px] mr-3 p-[15px] my-10 shimmer" />
                     <div className="w-[80px] mr-3 p-[15px] my-10 shimmer" />
