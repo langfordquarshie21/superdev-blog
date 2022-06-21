@@ -11,7 +11,9 @@ const WriteHeader = ({ onPublish }) => {
                     <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
                         <BackButton />
                         <Logo />
-                        <Button action={onPublish} label='Publish' />
+                        {onPublish
+                            ? <Button action={onPublish} label='Next &rarr;' />
+                            : <Button label='Uploading...' action={() => { }} />}
                     </div>
                 </header>
             </div>

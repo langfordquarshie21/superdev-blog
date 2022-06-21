@@ -3,12 +3,13 @@ import { BlogContext } from "../../context/context"
 import Link from "next/link"
 import Button from "../button"
 import { styles } from "./styles"
+import { modalStyles } from "../styles/modal.styles"
 
 const Drawer = () => {
     const { showDrawer } = useContext(BlogContext)
 
     if (showDrawer) return (
-        <section className={styles.drawerWrapper}>
+        <section className={modalStyles.drawerWrapper}>
             <div className={styles.drawer}>
                 <Link href='/' passHref><p className={styles.link}>Home</p></Link>
                 <Link href='/' passHref><p className={styles.link}>About</p></Link>

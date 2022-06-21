@@ -7,6 +7,7 @@ import BasicLayout from "../components/layout/basicLayout"
 import ReadBlogShimmer from "../components/shimmers/readBlogShimmer"
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
+import Link from "next/link"
 
 const Read = () => {
     const [title, setTitle] = useState('')
@@ -14,7 +15,9 @@ const Read = () => {
     const [article, setArticle] = useState({
         title: '',
         banner: '',
-        description: ''
+        description: '',
+        tags: [],
+        writer: {}
     })
 
     const getPost = async () => {
@@ -53,10 +56,18 @@ const Read = () => {
             >
                 <div>
                     <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20">
+                        <br />
                         <BackButton />
                         <br />
                         <br />
                         <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
+                        <ul className="flex flex-wrap mb-10 -mt-5">
+                            {article.tags.map((tag, i) => {
+                                return <Link key={i} href={`/tag?${tag}`}>
+                                    <li className={styles.tag}>#{tag}</li>
+                                </Link>
+                            })}
+                        </ul>
                         <img src={article.banner} alt={article.title} className='mb-20 border border-borderGray rounded-md' />
                         {article.content
                             ? <ReactMarkdown
@@ -71,6 +82,10 @@ const Read = () => {
             </BasicLayout>
         </>
     )
+}
+
+const styles = {
+    tag: `border text-[#707070] border-borderGray w-max py-[8px] px-3 rounded-md mr-3 hover:bg-[#000] hover:text-[#fff] cursor-pointer`
 }
 
 export default Read

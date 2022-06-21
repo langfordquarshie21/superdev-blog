@@ -4,7 +4,7 @@ const BackPageTitle = ({ title }) => {
     return (
         <>
             <BackButton />
-            <h1 className="text-2xl my-3 lg:text-4xl capitalize">{title}</h1>
+            <h1 className="text-2xl my-3 lg:text-4xl">#{title}</h1>
         </>
     )
 }
