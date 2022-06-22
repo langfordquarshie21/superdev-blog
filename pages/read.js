@@ -23,10 +23,13 @@ export async function getServerSideProps(context) {
 
 const Read = ({ article }) => {
     const [title, setTitle] = useState('')
+    const [rawTitle, setRawTitle] = useState('')
 
     useEffect(() => {
         let _title = window.location.search.replace('?', '')
+        let _rawTitle = window.location.href
         setTitle(_title)
+        setRawTitle(_rawTitle)
     }, [article])
 
     useEffect(() => {
@@ -42,7 +45,8 @@ const Read = ({ article }) => {
                 meta={{
                     title: article.title,
                     description: article.description,
-                    image: article.banner
+                    image: article.banner,
+                    url: rawTitle
                 }}>
                 <div>
                     <ul className="flex flex-wrap mb-10 -mt-5">
