@@ -1,52 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
-import BackButton from "../components/backButton"
-import Header from "../components/header"
-import BasicLayout from "../components/layout/basicLayout"
-import ReadBlogShimmer from "../components/shimmers/readBlogShimmer"
-import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
 import Link from "next/link"
 import ReadLayout from "../components/layout/readLayout"
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
-const Read = () => {
-    const [title, setTitle] = useState('')
-    const [loading, setLoading] = useState(true)
-    const [exists, setExists] = useState(true)
-    const [article, setArticle] = useState({
-        title: '',
-        banner: '',
-        description: '',
-        tags: [],
-        writer: {}
-    })
+export async function getServerSideProps(context) {
+    const _query = context.query
+    const _queryValue = Object.keys(_query)[0]
+    const res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-post/' + _queryValue)
+    const data = await res.json()
 
-    const getPost = async () => {
-        try {
-            let _title = window.location.search.replace('?', '')
-            setTitle(_title)
-            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-post/' + _title)
-            let data = await res.json()
-            console.log('data', data)
-
-            if (!data.status) {
-                setExists(false)
-                return
-            }
-
-            setArticle(data.payload)
-            showLoader(false)
-        }
-
-        catch (e) {
-            setLoading(false)
-        }
+    if (data.payload) return {
+        props: { article: data.payload }
     }
 
+    return {
+        props: { article: data }
+    }
+}
+
+const Read = ({ article }) => {
+    const [title, setTitle] = useState('')
+
     useEffect(() => {
-        getPost()
-    }, [])
+        let _title = window.location.search.replace('?', '')
+        setTitle(_title)
+    }, [article])
 
     useEffect(() => {
         document.querySelectorAll('pre code').forEach((el) => {
@@ -54,25 +35,10 @@ const Read = () => {
         })
     }, [article])
 
-    if (!exists) return (
+    if (article.content) return (
         <>
             <ReadLayout
-                title={title}
-                meta={{
-                    title: 'Post not found',
-                    description: '',
-                    images: '',
-                }}>
-                <h3 className="opacity-50 mb-20">Oops! Post not found</h3>
-            </ReadLayout>
-        </>
-    )
-
-    return (
-        <>
-
-            <ReadLayout
-                title={title}
+                title={article.title}
                 meta={{
                     title: article.title,
                     description: article.description,
@@ -87,33 +53,27 @@ const Read = () => {
                         })}
                     </ul>
                     <img src={article.banner} alt={article.title} className='mb-20 border border-borderGray rounded-md' />
-                    {article.content
-                        ? <ReactMarkdown
-                            remarkRehypeOptions={{ commonmark: true }}
-                            className="md-viewer lg:text-xl text-[17px] pb-56">
-                            {article.content}
-                        </ReactMarkdown>
-                        : null}
-                    <ReadBlogShimmer show={loading} />
+                    <ReactMarkdown
+                        remarkRehypeOptions={{ commonmark: true }}
+                        className="md-viewer lg:text-xl text-[17px] pb-56">
+                        {article.content}
+                    </ReactMarkdown>
                 </div>
             </ReadLayout>
+        </>
+    )
 
-
-
-            {/* <Header />
-            <BasicLayout
-                
-            >
-                <div>
-                    <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20">
-                        <div className="-mt-10 lg:mt-5">
-                            <BackButton />
-                        </div>
-                        <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
-                        
-                    </div>
-                </div>
-            </BasicLayout> */}
+    return (
+        <>
+            <ReadLayout
+                title={title}
+                meta={{
+                    title: 'Post not found',
+                    description: '',
+                    images: '',
+                }}>
+                <h3 className="opacity-50 mb-20">Oops! Post not found</h3>
+            </ReadLayout>
         </>
     )
 }

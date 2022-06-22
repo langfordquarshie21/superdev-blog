@@ -36,8 +36,8 @@ const Articles = () => {
             <Header />
             <BasicLayout>
                 <ul className="-mt-10">
-                    {posts.map((post, i) => {
-                        return <BlogCard post={post} key={i} />
+                    {posts.map((article, i) => {
+                        return <BlogCard article={article} key={i} />
                     })}
                 </ul>
                 <BlogCardShimmer show={loading} />

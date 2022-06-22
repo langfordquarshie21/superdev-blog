@@ -1,5 +1,5 @@
-const ReadBlogShimmer = ({ show }) => {
-    if (show) return (
+const ReadBlogShimmer = () => {
+    return (
         <>
             <section className="-mt-20">
                 <div className="flex flex-wrap -mb-10">
@@ -17,8 +17,6 @@ const ReadBlogShimmer = ({ show }) => {
             </section>
         </>
     )
-
-    return null
 }
 
 export default ReadBlogShimmer

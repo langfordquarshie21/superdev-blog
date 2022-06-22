@@ -53,7 +53,7 @@ const Search = () => {
                             <ul className="overflow-scroll h-[94vh] -mt-10 pt-10">
                                 <b className='mb-5 block opacity-50'>Showing results for &lsquo;{query}&rsquo;</b>
                                 {posts.map((post, i) => {
-                                    return <BlogCard post={post} key={i} />
+                                    return <BlogCard article={post} key={i} />
                                 })}
                             </ul>
                         </BasicLayout>
