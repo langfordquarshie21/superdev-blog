@@ -9,6 +9,7 @@ import { modalStyles } from '../components/styles/modal.styles'
 const Write = () => {
     const [markdown, setMarkdown] = useState()
     const [title, setTitle] = useState()
+    const [description, setDescription] = useState()
     const [banner, setBanner] = useState()
     const [tags, setTags] = useState()
     const [showModal, setShowModal] = useState(false)
@@ -47,6 +48,7 @@ const Write = () => {
             if (!markdown) return
             if (!title) return
             if (!tags) return
+            if (!description) return
             if (!banner || typeof banner !== 'object') return
 
             let conf = window.prompt("Enter passcode to share article")
@@ -77,6 +79,7 @@ const Write = () => {
                 timestamp: Date().substring(4, 15),
                 banner: await uploadFile(),
                 title: title,
+                description: description,
                 search_title: _searchTitle,
                 read_length: getReadingTime(),
                 keywords: _keywords,
@@ -110,6 +113,7 @@ const Write = () => {
             setTags('')
             setBanner()
             setTitle('')
+            setDescription('')
             setShowModal(false)
             setLoading(false)
             alert("Posted! 🎉")
@@ -134,6 +138,8 @@ const Write = () => {
                         <b className='cursor-pointer mb-5' onClick={() => setShowModal(false)}>Close &times;</b>
                         <p>Tags</p>
                         <input value={tags} className='outline p-3 py-2 rounded-md my-10 mt-3 border border-borderGray outline-none' onChange={e => setTags(e.target.value)} placeholder='Tech,web3,HTML' />
+                        <p>Description</p>
+                        <textarea value={description} className='outline p-3 py-2 rounded-md my-10 mt-3 border border-borderGray outline-none' onChange={e => setDescription(e.target.value)} placeholder='In this article, we&apos;ll learn everything there is to know about the blockchain' />
                         <Button action={addPost} label='Upload' />
                     </div>
                 </div>
