@@ -41,8 +41,8 @@ const Read = ({ article }) => {
                 title={article.title}
                 meta={{
                     title: article.title,
-                    description: article.description,
-                    images: article.banner
+                    description: '',
+                    image: article.banner
                 }}>
                 <div>
                     <ul className="flex flex-wrap mb-10 -mt-5">

@@ -4,7 +4,7 @@ import BackButton from "../backButton"
 import Footer from "../footer"
 import Header from "../header"
 
-const ReadLayout = ({ children, title = '', meta = defaultMeta }) => {
+const ReadLayout = ({ children, title = '', meta }) => {
     return (
         <>
             <Head>
