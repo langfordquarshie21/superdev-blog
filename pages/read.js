@@ -41,7 +41,7 @@ const Read = ({ article }) => {
                 title={article.title}
                 meta={{
                     title: article.title,
-                    description: '',
+                    description: article.description,
                     image: article.banner
                 }}>
                 <div>
