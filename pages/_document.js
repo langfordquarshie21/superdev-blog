@@ -1,26 +1,27 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { defaultMeta } from '../content'
 
 export default function Document() {
-    const meta = {
-        title: 'Superdev blog⚡',
-        description: 'Top notch articles & tutorials on web and software development',
-        image: 'https://res.cloudinary.com/follio/image/upload/v1655594335/hz6h7qh8iqz6osjvvsa4.png'
-    }
-
     return (
         <Html lang="en">
             <Head>
                 <meta name="robots" content="follow, index" />
-                <meta name="description" content={meta.description} />
-                <meta property="og:site_name" content={meta.title} />
-                <meta property="og:description" content={meta.description} />
-                <meta property="og:title" content={meta.title} />
-                <meta property="og:image" content={meta.image} />
+                <meta name="description" content={defaultMeta.description} />
+                <meta property="og:site_name" content={defaultMeta.site_name} />
+                <meta property="og:title" content={defaultMeta.title} />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content={defaultMeta.description} />
+                <meta property="og:url" content={defaultMeta.domain} />
+                <meta property="og:image" content={defaultMeta.image} />
+                <meta property="og:image:alt" content={defaultMeta.image_alt} />
+                <meta name="twitter:image:alt" content={defaultMeta.image_alt} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@yourname" />
-                <meta name="twitter:title" content={meta.title} />
-                <meta name="twitter:description" content={meta.description} />
-                <meta name="twitter:image" content={meta.image} />
+                <meta property="twitter:domain" content={defaultMeta.url} />
+                <meta name="twitter:creator" content={defaultMeta.twitterCreator} />
+                <meta property="twitter:url" content={defaultMeta.domain} />
+                <meta name="twitter:title" content={defaultMeta.title} />
+                <meta name="twitter:description" content={defaultMeta.description} />
+                <meta name="twitter:image" content={defaultMeta.image} />
             </Head>
             <body>
                 <Main />
