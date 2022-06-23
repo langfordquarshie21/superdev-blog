@@ -1,7 +1,18 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useEffect } from 'react'
 import { defaultMeta } from '../content'
 
 export default function Document() {
+
+    useEffect(() => {
+        var ads = document.getElementsByClassName("adsbygoogle").length;
+        for (var i = 0; i < ads; i++) {
+            try {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) { }
+        }
+    }, [])
+
     return (
         <Html lang="en">
             <Head>
@@ -22,6 +33,7 @@ export default function Document() {
                 <meta name="twitter:title" content={defaultMeta.title} />
                 <meta name="twitter:description" content={defaultMeta.description} />
                 <meta name="twitter:image" content={defaultMeta.image} />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3725774437684608" crossorigin="anonymous"></script>
             </Head>
             <body>
                 <Main />
