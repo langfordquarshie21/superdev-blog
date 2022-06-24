@@ -1,30 +1,26 @@
 const BlogCardShimmer = ({ show }) => {
     if (show) return (
-        <>
-            <Shimmer />
-            <Shimmer />
-            <Shimmer />
-        </>
+        <section>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
+                <ShimmerCard />
+                <ShimmerCard />
+                <ShimmerCard />
+                <ShimmerCard />
+            </ul>
+        </section>
     )
 
     return null
 }
 
-const Shimmer = () => {
+const ShimmerCard = () => {
     return (
         <>
-            <section className="lg:pb-10 mb-8 pb-16 lg:-mt-[50px] blog-card">
-                <div className='flex items-center flex-col lg:flex-row justify-between'>
-                    <div className='w-full lg:max-w-3xl'>
-                        <div className="w-full p-[10px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                        <div className="w-full p-[5px] mb-3 shimmer" />
-                    </div>
-                    <div className='shimmer w-full h-[200px] mt-5 lg:w-[200px]' />
-                </div>
-            </section>
+            <div className="w-full lg:p-3 lg:-ml-3 lg:mb-10 mb-14">
+                <div className="w-full h-[250px] rounded-[20px] mb-3 shimmer" />
+                <div className="w-full p-[6px] my-3 rounded-xl shimmer" />
+                <div className="w-full p-[6px] my-3 rounded-xl shimmer" />
+            </div>
         </>
     )
 }

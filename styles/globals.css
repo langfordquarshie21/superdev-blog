@@ -126,7 +126,7 @@ img.blog-grid-banner {
   border-radius: 5px;
 }
 
-.blog-card:hover b {
+.blog-card:hover p {
   color: var(--brand);
 }
 
@@ -291,6 +291,11 @@ header {
   background: #FFFAE0;
 }
 
+.md-viewer blockquote {
+  border-left: 3px solid var(--brand);
+  padding-left: 14px;
+}
+
 /* .md-viewer h1,
 .md-viewer h2,
 .md-viewer h3,
@@ -319,7 +324,7 @@ header {
   animation: shimmer 2s infinite linear;
   background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
   background-size: 1000px 100%;
-  border-radius: 3px;
+  /* border-radius: 3px; */
 }
 
 @keyframes shimmer {

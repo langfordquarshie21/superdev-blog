@@ -35,7 +35,7 @@ const Articles = () => {
         <>
             <Header />
             <BasicLayout>
-                <ul className="-mt-10">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
                     {posts.map((article, i) => {
                         return <BlogCard article={article} key={i} />
                     })}
