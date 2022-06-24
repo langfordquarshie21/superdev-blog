@@ -78,6 +78,8 @@ const Read = ({ article }) => {
     if (article.content) return (
         <>
             <ReadLayout
+                readLength={article.read_length}
+                timestamp={article.timestamp}
                 meta={{
                     title: article.title,
                     description: article.description,

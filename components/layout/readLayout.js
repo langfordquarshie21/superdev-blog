@@ -4,7 +4,7 @@ import BackButton from "../backButton"
 import Footer from "../footer"
 import Header from "../header"
 
-const ReadLayout = ({ children, meta }) => {
+const ReadLayout = ({ children, meta, readLength, timestamp }) => {
     return (
         <>
             <Head>
@@ -40,8 +40,10 @@ const ReadLayout = ({ children, meta }) => {
                         <div className="-mt-10 lg:mt-5">
                             <BackButton />
                         </div>
-                        <h2 className="capitalize mt-[60px] text-center">{meta.title.split('-').join(' ')}</h2>
-                        <p className="mb-[60px] opacity-50 text-center">June 21 2020 • 2 min read</p>
+                        <h2 className="capitalize mt-[60px] text-[24px] lg:text-[40px] mb-10 text-center">{meta.title.split('-').join(' ')}</h2>
+                        {readLength && timestamp
+                            ? <p className="mb-[30px] -mt-[20px] opacity-50 text-center">{timestamp} • {readLength} min read</p>
+                            : null}
                         {children}
                     </div>
                 </div>
