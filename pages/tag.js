@@ -34,7 +34,7 @@ const Tag = () => {
     useEffect(() => {
         setRoute(window.location.search.replace('?', ''))
         getPostsByTag()
-    }, [])
+    }, [route])
 
     const meta = {
         title: `Tag - ${route}`,
