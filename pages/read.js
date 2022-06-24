@@ -78,7 +78,6 @@ const Read = ({ article }) => {
     if (article.content) return (
         <>
             <ReadLayout
-                title={article.title}
                 meta={{
                     title: article.title,
                     description: article.description,
@@ -120,7 +119,6 @@ const Read = ({ article }) => {
     return (
         <>
             <ReadLayout
-                title={title}
                 meta={{
                     title: 'Post not found',
                     description: '',

@@ -17,7 +17,7 @@ const ShimmerCard = () => {
     return (
         <>
             <div className="w-full lg:p-3 lg:-ml-3 lg:mb-10 mb-14">
-                <div className="w-full h-[250px] rounded-[20px] mb-3 shimmer" />
+                <div className="w-full h-[250px] rounded-[10px] mb-3 shimmer" />
                 <div className="w-full p-[6px] my-3 rounded-xl shimmer" />
                 <div className="w-full p-[6px] my-3 rounded-xl shimmer" />
             </div>

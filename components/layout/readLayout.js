@@ -4,7 +4,7 @@ import BackButton from "../backButton"
 import Footer from "../footer"
 import Header from "../header"
 
-const ReadLayout = ({ children, title = '', meta }) => {
+const ReadLayout = ({ children, meta }) => {
     return (
         <>
             <Head>
@@ -27,14 +27,14 @@ const ReadLayout = ({ children, title = '', meta }) => {
                 <meta name="twitter:description" content={meta.description} />
                 <meta name="twitter:image" content={meta.image} />
             </Head>
+            <Header />
             <main className="w-screen">
                 <div className="max-w-7xl p-5 m-auto mt-[78px]">
-                    <Header />
                     <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20">
                         <div className="-mt-10 lg:mt-5">
                             <BackButton />
                         </div>
-                        <h1 className="mb-10 capitalize">{title.split('-').join(' ')}</h1>
+                        <h1 className="mb-10 capitalize">{meta.title.split('-').join(' ')}</h1>
                         {children}
                     </div>
                 </div>

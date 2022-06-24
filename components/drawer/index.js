@@ -4,7 +4,7 @@ import Link from "next/link"
 import Button from "../button"
 import { styles } from "./styles"
 import { modalStyles } from "../styles/modal.styles"
-import { tagTabs } from "../../content"
+import { navLinks } from "../../content"
 
 const Drawer = () => {
     const { showDrawer } = useContext(BlogContext)
@@ -12,7 +12,7 @@ const Drawer = () => {
     if (showDrawer) return (
         <section className={modalStyles.drawerWrapper}>
             <div className={styles.drawer}>
-                {tagTabs.map((tag, i) => {
+                {navLinks.map((tag, i) => {
                     return <Link passHref key={i} href={`/tag?${tag.toLocaleLowerCase().replace(' ', '-')}`}>
                         <p className={styles.link}>{tag}</p>
                     </Link>
