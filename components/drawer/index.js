@@ -18,7 +18,7 @@ const Drawer = () => {
                     </Link>
                 })}
 
-                <div className="m-5" />
+                <div className="m-3" />
                 <Button page='/write' label='Write a blog' />
 
                 {/* <Link href='/' passHref><p className={styles.link}>Home</p></Link>
