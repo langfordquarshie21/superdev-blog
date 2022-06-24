@@ -24,7 +24,7 @@ export const BlogProvider = ({ children }) => {
         str.split(' ').forEach(word => {
             _keywords.push(word.toLowerCase())
         })
-        return _keywords.join().replaceAll(',', '-')
+        return _keywords
     }
 
     const cancelSearch = () => {

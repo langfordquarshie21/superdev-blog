@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { BlogContext } from "../context/context"
 import Image from "next/image"
 import BlogCard from "../components/blogCard"
@@ -18,17 +18,20 @@ const Search = () => {
         banner: ''
     }
 
-    const searchPosts = async () => {
+    const searchPosts = async (searchQuery) => {
         try {
             if (query === '') return
-
             setLoading(true)
-
-            let res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/search-posts/' + formatSearchQuery(query))
+            const res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/search-posts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(searchQuery)
+            })
             let data = await res.json()
             if (!data.status) return
             setPosts(data.payload)
             setLoading(false)
+            console.warn(data.payload[0])
         }
 
         catch (e) {
@@ -37,17 +40,21 @@ const Search = () => {
         }
     }
 
+    useEffect(() => {
+        searchPosts(formatSearchQuery(query))
+        return () => { }
+    }, [query])
+
+
     return (
         <>
             <BasicLayout meta={meta}>
                 <div className='fixed top-0 left-0 w-screen bg-[#fff] z-20 p-2 px-5 flex items-center justify-center'>
                     <div className="w-[90%] max-w-7xl">
-                        {/* <div className={inputStyles.inputContainer}> */}
                         <div className="flex items-center w-full border border-borderGray p-1 px-3 rounded-md">
                             <Image src={search} width={16} alt='search' className='search-icon' />
                             <input value={query} onChange={e => {
                                 setQuery(e.target.value)
-                                searchPosts()
                             }} className='w-full ml-3 outline-none' placeholder='Search posts...' />
                         </div>
                     </div>
