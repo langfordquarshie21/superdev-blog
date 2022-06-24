@@ -5,7 +5,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-      </Head>
+      </Head> */}
       <BlogProvider>
         <Component {...pageProps} />
       </BlogProvider>

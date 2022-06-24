@@ -36,6 +36,13 @@ const Tag = () => {
         getPostsByTag()
     }, [route])
 
+    const meta = {
+        title: `Tag - ${route}`,
+        description: `Find articles with tag #${route}`,
+        url: `https://superdev.dev/tag?${route}`,
+        image: '',
+    }
+
     const getPostsByTag = async () => {
         try {
             setLoading(true)
@@ -63,7 +70,7 @@ const Tag = () => {
     if (!exist) return (
         <>
             <Header />
-            <BasicLayout metaTitle={`Tag - ${route}`}>
+            <BasicLayout meta={meta}>
                 <BackPageTitle title={route} />
                 <h3 className="opacity-50 mb-20">Oops! No posts relating to tag found</h3>
             </BasicLayout>
@@ -73,7 +80,7 @@ const Tag = () => {
     return (
         <>
             <Header />
-            <BasicLayout metaTitle={`Tag - ${route}`}>
+            <BasicLayout meta={meta}>
                 <BackPageTitle title={route} />
                 <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
                     {articles.map((article, i) => {

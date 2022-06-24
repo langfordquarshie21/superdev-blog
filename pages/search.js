@@ -11,6 +11,13 @@ const Search = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const meta = {
+        title: 'Search 🔍',
+        description: 'Search for an article on Superdev',
+        url: 'https://superdev.dev/search',
+        banner: ''
+    }
+
     const searchPosts = async () => {
         try {
             if (query === '') return
@@ -32,7 +39,7 @@ const Search = () => {
 
     return (
         <>
-            <BasicLayout metaTitle="🔍 Search">
+            <BasicLayout meta={meta}>
                 <div className='fixed top-0 left-0 w-screen bg-[#fff] z-20 p-2 px-5 flex items-center justify-center'>
                     <div className="w-[90%] max-w-7xl">
                         {/* <div className={inputStyles.inputContainer}> */}
@@ -49,13 +56,9 @@ const Search = () => {
 
                 {!loading
                     ? <div className='w-screen z-10 bg-[#fff] fixed top-0 left-0'>
-                        <BasicLayout>
+                        <BasicLayout meta={meta}>
                             <ul className="overflow-scroll h-[94vh] -mt-10 pt-10">
                                 <b className='mb-5 block opacity-50'>Showing results for &lsquo;{query}&rsquo;</b>
-                                {/* {posts.map((post, i) => {
-                                    return <BlogCard article={ } key={i} />
-                                })} */}
-
                                 <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
                                     {posts.map((article, i) => {
                                         return <BlogCard article={article} key={i} />

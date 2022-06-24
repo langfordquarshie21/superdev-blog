@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react"
+import { defaultMeta } from "../content"
 import BlogCard from "../components/blogCard"
 import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
@@ -34,7 +35,7 @@ const Articles = () => {
     return (
         <>
             <Header />
-            <BasicLayout>
+            <BasicLayout meta={defaultMeta}>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
                     {posts.map((article, i) => {
                         return <BlogCard article={article} key={i} />
