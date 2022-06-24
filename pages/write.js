@@ -147,7 +147,9 @@ const Write = () => {
 
             <WriteHeader onPublish={() => setShowModal(true)} />
 
-            <BasicLayout metaTitle='Write an article'>
+            <BasicLayout meta={{
+                title: 'Write an article'
+            }}>
                 <div className='flex flex-col lg:flex-row h-screen'>
                     <div className='lg:h-screen h-full lg:px-5 pt-5 bg-[#fff] -mt-10 w-full overflow-y-scroll'>
                         <input type='file' className={inputStyles.fileInput} onChange={e => setBanner(e.target.files[0])} accept='image/*' />
