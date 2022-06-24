@@ -85,7 +85,7 @@ const Read = ({ article }) => {
                     url: rawTitle
                 }}>
                 <div>
-                    <img src={article.banner} alt={article.title} className='mb-20 border border-borderGray rounded-md' />
+                    <img src={article.banner} alt={article.title} className='mb-5 border border-borderGray rounded-md' />
                     <ReactMarkdown
                         remarkRehypeOptions={{ commonmark: true }}
                         className="md-viewer lg:text-xl text-[17px] pb-20">

@@ -39,7 +39,7 @@ const BasicLayout = ({ children, meta, hideFooter = false }) => {
                 <meta name="twitter:image:alt" content={defaultMeta.image_alt} />
             </Head>
             <main className="w-screen">
-                <div className="max-w-7xl p-5 m-auto mt-[78px]">
+                <div className="max-w-6xl p-5 m-auto mt-[78px]">
                     {children}
                 </div>
             </main>

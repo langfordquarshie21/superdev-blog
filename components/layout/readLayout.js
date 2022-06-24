@@ -40,7 +40,8 @@ const ReadLayout = ({ children, meta }) => {
                         <div className="-mt-10 lg:mt-5">
                             <BackButton />
                         </div>
-                        <h1 className="mb-10 capitalize">{meta.title.split('-').join(' ')}</h1>
+                        <h2 className="capitalize mt-[60px] text-center">{meta.title.split('-').join(' ')}</h2>
+                        <p className="mb-[60px] opacity-50 text-center">June 21 2020 • 2 min read</p>
                         {children}
                     </div>
                 </div>

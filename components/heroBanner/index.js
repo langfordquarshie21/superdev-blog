@@ -50,7 +50,7 @@ const HeroBanner = () => {
 
 const styles = {
     main: `big-home-text-container py-10 lg:py-20 border-b border-b-borderGray w-screen mt-[50px]`,
-    wrapper: `max-w-7xl m-auto px-5 pt-5`,
+    wrapper: `max-w-6xl m-auto px-5 pt-5`,
 }
 
 export default HeroBanner

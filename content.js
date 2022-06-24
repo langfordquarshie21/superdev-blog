@@ -7,13 +7,14 @@ export const navLinks = [
 ]
 
 export const tagTabs = [
-    'Cryptocurrency',
-    "Frontend",
-    'BTC',
-    'Software',
+    'Blockchain',
+    "HTML",
+    'CSS',
+    'NodeJs',
     'Web3',
     'JavaScript',
-    'Internet'
+    'NFTs',
+    'Crypto',
 ]
 
 export const defaultMeta = {

@@ -33,25 +33,25 @@ const Header = () => {
     return (
         <>
             <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
-                <div className="p-5 py-3 max-w-7xl flex items-center justify-between m-auto">
+                <div className="p-5 py-3 max-w-6xl flex items-center justify-between m-auto">
                     <Logo />
                     <div className='hidden lg:block'>
                         <SearchInput />
                     </div>
-                    <Nav />
+                    {/* <Nav />
                     <div className='hidden lg:block'>
                         <Button page='/write' label='Write a blog' />
-                    </div>
+                    </div> */}
                     <div className='lg:hidden flex items-center'>
                         <Link href='/search' passHref>
                             <Image src={search} alt='search' />
                         </Link>
-                        <MenuButton />
+                        {/* <MenuButton /> */}
                     </div>
                 </div>
             </header>
             <HeroBannerElement />
-            <Drawer />
+            {/* <Drawer /> */}
         </>
     )
 }

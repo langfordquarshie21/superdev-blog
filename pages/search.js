@@ -50,7 +50,7 @@ const Search = () => {
         <>
             <BasicLayout meta={meta}>
                 <div className='fixed top-0 left-0 w-screen bg-[#fff] z-20 p-2 px-5 flex items-center justify-center'>
-                    <div className="w-[90%] max-w-7xl">
+                    <div className="w-[90%] max-w-6xl">
                         <div className="flex items-center w-full border border-borderGray p-1 px-3 rounded-md">
                             <Image src={search} width={16} alt='search' className='search-icon' />
                             <input value={query} onChange={e => {
