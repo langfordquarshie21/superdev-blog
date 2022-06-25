@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { inputStyles } from '../components/styles/input.styles'
+import { modalStyles } from '../components/styles/modal.styles'
 import ReactMarkdown from 'react-markdown'
 import Button from '../components/button'
 import WriteHeader from '../components/header/writeHeader'
 import BasicLayout from "../components/layout/basicLayout"
-import { inputStyles } from '../components/styles/input.styles'
-import { modalStyles } from '../components/styles/modal.styles'
 
 const Write = () => {
     const [markdown, setMarkdown] = useState()

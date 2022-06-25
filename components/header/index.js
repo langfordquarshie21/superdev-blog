@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="header fixed z-50 border-b border-b-borderGray top-0 left-0 w-screen">
+            <header className="header fixed z-50 top-0 left-0 w-screen">
                 <div className="p-5 py-3 max-w-6xl flex items-center justify-between m-auto">
                     <Logo />
                     <div className='hidden lg:block'>

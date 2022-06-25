@@ -73,9 +73,10 @@ const Read = ({ article }) => {
     }, [article, similarArticles])
 
     useEffect(() => {
-        document.querySelectorAll('pre code').forEach((el) => {
-            hljs.highlightAll(el);
-        })
+        document.querySelectorAll('pre code')
+            .forEach((el) => {
+                hljs.highlightAll(el);
+            })
     }, [article])
 
     if (article.content) return (

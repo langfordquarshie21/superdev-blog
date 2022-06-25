@@ -14,7 +14,7 @@ const WhiteButton = ({ label, page, action }) => {
 }
 
 const styles = {
-    button: `bg-[#fff] text-brand transition text-[#fff] p-2 px-4 whitespace-nowrap rounded-full border border-brand hover:text-brand hover:bg-[#fff]`,
+    button: `bg-[#fff] hover:bg-brand hover:text-[#fff] text-brand transition p-2 px-4 whitespace-nowrap rounded-full border border-brand`,
 }
 
 export default WhiteButton

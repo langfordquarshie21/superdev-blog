@@ -36,7 +36,8 @@ const ReadLayout = ({ children, meta, readLength, timestamp }) => {
             <Header />
             <main className="w-screen">
                 <div className="max-w-7xl p-5 m-auto mt-[78px]">
-                    <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20">
+                    {/* <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20"> */}
+                    <div className="max-w-4xl m-auto lg:p-5 p-0 -mt-10 -mb-5 pt-20">
                         <div className="-mt-10 lg:mt-5">
                             <BackButton />
                         </div>
