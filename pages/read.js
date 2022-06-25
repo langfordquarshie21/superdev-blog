@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { BlogContext } from "../context/context";
 import ReactMarkdown from "react-markdown"
 import Link from "next/link"
 import ReadLayout from "../components/layout/readLayout"
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import BlogCard from "../components/blogCard";
+import Image from "next/image";
 
 export async function getServerSideProps(context) {
     const _query = context.query
@@ -23,6 +25,7 @@ export async function getServerSideProps(context) {
 }
 
 const Read = ({ article }) => {
+    const { rgbDataURL } = useContext(BlogContext)
     const [title, setTitle] = useState('')
     const [rawTitle, setRawTitle] = useState('')
     const [similarArticles, setSimilarArticles] = useState([])
@@ -87,7 +90,19 @@ const Read = ({ article }) => {
                     url: rawTitle
                 }}>
                 <div>
-                    <img src={article.banner} alt={article.title} className='mb-5 border border-borderGray rounded-md' />
+                    {/* <img src={article.banner} alt={article.title} className='mb-5 border border-borderGray rounded-md' /> */}
+
+                    <div className="w-full min-h-[200px] lg:h-[480px] mb-10 lg:min-h-[270px] relative">
+                        <Image
+                            layout="fill"
+                            loading='lazy'
+                            placeholder="blur"
+                            src={article.banner}
+                            alt={article.title}
+                            blurDataURL={rgbDataURL(226, 234, 254)}
+                            className='rounded-[10px]' />
+                    </div>
+
                     <ReactMarkdown
                         remarkRehypeOptions={{ commonmark: true }}
                         className="md-viewer lg:text-xl text-[17px] pb-20">

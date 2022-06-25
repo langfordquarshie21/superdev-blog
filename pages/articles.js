@@ -36,7 +36,7 @@ const Articles = () => {
         <>
             <Header />
             <BasicLayout meta={defaultMeta}>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 p-0 -mt-16">
                     {posts.map((article, i) => {
                         return <BlogCard article={article} key={i} />
                     })}

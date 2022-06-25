@@ -5,16 +5,17 @@ import github from '../../public/assets/svg/github.svg'
 import linkedin from '../../public/assets/svg/linkedin.svg'
 import instagram from '../../public/assets/svg/instagram.svg'
 import Link from "next/link"
+import WhiteButton from "../whiteButton"
 
 const HeroBanner = () => {
     return (
         <>
             <div className={styles.main}>
                 <div className={styles.wrapper}>
-                    <div className='max-w-3xl'>
+                    <div>
                         <h1 className={textStyles.pageTitle}>Grow from a dev to a <span className="gradient">Super dev</span></h1>
-                        <p className='mt-5 leading-[30px] opacity-60'>
-                            Hello there 👋.I&apos; m Langford, a full-stack web and software developer. I&apos; m also a Technical Writer and Content Creator ✍️. And I&apos;m here to help you grow from web developer to a <span className="gradient">Super dev</span>
+                        <p id='hero-subtext' className='max-w-3xl my-10 leading-[40px] lg:text-xl text-[19px] text-greyText'>
+                            Hello there 👋. I&apos;m Langford, a full-stack web and software developer. I&apos;m also a Technical Writer and Content Creator ✍️. And I&apos;m here to help you grow from dev to a <span className="gradient">Superdev</span>
                         </p>
                         <div className='flex items-center w-full max-w-[170px] justify-between mt-5'>
                             <Link passHref target='_blank' href='https://github.com/langfordquarshie21'>
@@ -41,6 +42,7 @@ const HeroBanner = () => {
                                 </div>
                             </Link>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -49,7 +51,7 @@ const HeroBanner = () => {
 }
 
 const styles = {
-    main: `big-home-text-container py-10 lg:py-20 border-b border-b-borderGray w-screen mt-[50px]`,
+    main: `big-home-text-container py-10 lg:py-20 w-screen mt-[50px]`,
     wrapper: `max-w-6xl m-auto px-5 pt-5`,
 }
 

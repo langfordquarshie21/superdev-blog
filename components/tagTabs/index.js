@@ -9,7 +9,7 @@ const TagTabs = () => {
                 <ul className={styles.tabContainer}>
                     {tagTabs.map((tag, i) => {
                         return <Link passHref key={i} href={`/tag?${tag.toLocaleLowerCase().replace(' ', '-')}`}>
-                            <li className={styles.link}>{tag}</li>
+                            <li className={styles.link}>#{tag}</li>
                         </Link>
                     })}
                 </ul>

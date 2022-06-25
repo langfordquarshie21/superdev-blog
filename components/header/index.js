@@ -38,15 +38,10 @@ const Header = () => {
                     <div className='hidden lg:block'>
                         <SearchInput />
                     </div>
-                    {/* <Nav />
-                    <div className='hidden lg:block'>
-                        <Button page='/write' label='Write a blog' />
-                    </div> */}
                     <div className='lg:hidden flex items-center'>
                         <Link href='/search' passHref>
                             <Image src={search} alt='search' />
                         </Link>
-                        {/* <MenuButton /> */}
                     </div>
                 </div>
             </header>

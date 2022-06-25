@@ -147,11 +147,15 @@ header {
 }
 
 .big-home-text-container {
-  background-color: #ffffff;
-  /* opacity: 0.2; */
+  /* background-color: #ffffff;
   background-image: radial-gradient(#0071f311 3px, transparent 0.75px), radial-gradient(#fff 0.75px, #ffffff 0.75px);
   background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+  background-position: 0 0, 15px 15px; */
+  background: #f5f5f5de;
+}
+
+#hero-subtext {
+  line-height: 40px;
 }
 
 ::-webkit-scrollbar {
