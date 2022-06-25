@@ -17,7 +17,7 @@ const BasicLayout = ({ children, meta, hideFooter = false }) => {
                 <div className="pb-12" />
                 <div className="fixed bottom-0 z-20 w-screen bg-brand left-0 text-[#fff]">
                     <div className="m-auto p-5 max-w-6xl flex items-center flex-wrap justify-between py-2">
-                        <b className="lg:text-xl">Join to my weekly newsletter</b>
+                        <b className="lg:text-xl">Join my weekly newsletter</b>
                         <WhiteButton
                             page='https://www.getrevue.co/profile/langford_dev?via=twitter-profile'
                             label='Subscribe' />
