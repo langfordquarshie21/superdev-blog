@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Button from "../button";
-import SubscribeNewsletter from "../subscribeNewsletter";
+// import SubscribeNewsletter from "../subscribeNewsletter";
 import SearchInput from "../inputs/searchInput";
 import HeroBanner from "../heroBanner";
 import search from "../../public/assets/svg/search.svg";

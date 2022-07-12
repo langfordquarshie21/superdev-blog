@@ -10,7 +10,7 @@ const BlogCard = ({ article }) => {
     <>
       <Link href={`/read?${article.search_title}`}>
         {/* <div className="blog-card shadow-md m-5 rounded-2xl hover:shadow-xl hover:scale-105 transition bg-[#fff] lg:scale-95 w-full cursor-pointer lg:p-3 lg:-ml-3 lg:mb-10 mb-14"> */}
-        <div className="shadow-md bg-[#fff] m-5 mx-0 sm:mx-2 p-3 rounded-2xl cursor-pointer lg:m-3 transition hover:scale-105 hover:shadow-lg">
+        <div className="shadow-md bg-[#fff] m-2 p-3 rounded-2xl cursor-pointer transition hover:shadow-none hover:-translate-y-[3px]">
           <div className="w-full min-h-[220px] lg:min-h-[270px] relative">
             <Image
               layout="fill"

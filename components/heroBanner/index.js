@@ -6,6 +6,7 @@ import linkedin from "../../public/assets/svg/linkedin.svg";
 import instagram from "../../public/assets/svg/instagram.svg";
 import Link from "next/link";
 import WhiteButton from "../whiteButton";
+import Newsletter from "../subscribeNewsletter";
 
 const HeroBanner = () => {
   return (
@@ -18,6 +19,14 @@ const HeroBanner = () => {
             We've got tutorials and resources geared towards self-taught web
             developers. Check it out below!
           </h2>
+          <br />
+          <WhiteButton
+            page="https://www.getrevue.co/profile/langford_dev?via=twitter-profile"
+            label="Subscribe to my newsletter"
+          />
+
+          {/* <div className="flex justify-center items-center"> */}
+          {/* </div> */}
           {/* <h1> */}
           {/* <br /> */}
           {/* Grow from a dev to a <span className="gradient">Super dev</span> */}
@@ -55,14 +64,16 @@ const HeroBanner = () => {
 
                     </div> */}
         </div>
+
+        {/* <Newsletter /> */}
       </div>
     </>
   );
 };
 
 const styles = {
-  main: `py-10 w-screen mt-[50px] bg-[#8e38ff] text-[#fff] lg:h-[460px] -mt-[75px]`,
-  wrapper: `max-w-5xl m-auto px-5 pt-20 pb-10 text-center flex items-center justify-center flex-col h-full`,
+  main: `py-10 pt-32 w-screen mt-[50px] bg-[#8e38ff] text-[#fff] lg:h-[460px] -mt-[75px]`,
+  wrapper: `max-w-5xl m-auto px-5 text-center flex items-center justify-center flex-col h-full`,
 };
 
 export default HeroBanner;

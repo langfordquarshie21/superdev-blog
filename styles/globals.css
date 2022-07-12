@@ -302,9 +302,10 @@ img.blog-grid-banner {
 }
 
 .md-viewer pre {
-  background: var(--grey-bg);
+  background: #ffffffab;
   border-radius: 10px;
   padding: 10px;
+  border: 1px solid var(--border-gray);
 }
 
 .md-viewer pre code {
