@@ -82,7 +82,7 @@ const Tag = () => {
             <Header />
             <BasicLayout meta={meta}>
                 <BackPageTitle title={route} />
-                <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
+                <ul className="grid grid-cols-1 sm:grid-cols-3 p-0">
                     {articles.map((article, i) => {
                         return <BlogCard article={article} key={i} />
                     })}
