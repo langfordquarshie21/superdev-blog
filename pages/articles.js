@@ -33,18 +33,19 @@ const Articles = () => {
     }, [])
 
     return (
-        <>
-            <Header />
-            <BasicLayout meta={defaultMeta}>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 p-0 -mt-16">
-                    {posts.map((article, i) => {
-                        return <BlogCard article={article} key={i} />
-                    })}
-                </ul>
-                <BlogCardShimmer show={loading} />
-            </BasicLayout>
-        </>
-    )
+      <>
+        <Header />
+        <BasicLayout meta={defaultMeta}>
+          <h2>🤩 My recent posts</h2>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 p-0">
+            {posts.map((article, i) => {
+              return <BlogCard article={article} key={i} />;
+            })}
+          </ul>
+          <BlogCardShimmer show={loading} />
+        </BasicLayout>
+      </>
+    );
 }
 
 export default Articles

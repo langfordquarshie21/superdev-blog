@@ -1,6 +1,7 @@
 import { navLinks } from "../../../content"
-import { styles } from "./styles"
+// import { styles } from "./styles"
 import Link from "next/link"
+import styles from './styles';
 
 const Nav = () => {
     return (

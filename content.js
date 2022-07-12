@@ -7,6 +7,9 @@ export const navLinks = [
 ]
 
 export const tagTabs = [
+    'React',
+    'Next.js',
+    'Tailwind CSS',
     'Blockchain',
     "HTML",
     'CSS',

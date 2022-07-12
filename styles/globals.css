@@ -1,76 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --brand: #4875F7;
+  --brand: #4875f7;
   --selection: #63f49c;
   --accent: #63f49c;
-  --link: #5F4CF1;
+  --link: #5f4cf1;
   --grey-bg: #f1f1f1ab;
   --border-gray: #eaeaea;
-  --secondary: #5F4CF1;
+  --secondary: #5f4cf1;
+  scroll-behavior: smooth;
 }
 
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  /* background: var(--grey-bg); */
-  /* color: #999999; */
-}
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden; */
+/* background: var(--grey-bg); */
+/* color: #999999; */
+/* } */
 
-.newsletter {
+/* .newsletter {
   background: linear-gradient(45deg, var(--secondary), var(--brand));
-}
+} */
 
-.gradient {
+/* .gradient {
   background: -webkit-linear-gradient(45deg, var(--brand), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-  /* font-weight: 100; */
-}
-
-@font-face {
-  font-family: 'Inter var';
-  font-style: normal;
+/* @font-face { */
+/* font-family: "DefaultFont"; */
+/* font-style: normal;
   font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
-}
+  font-display: block; */
+/* src: url(/public/fonts/Rubik-Bold.ttf);
+} */
 
-@font-face {
-  font-family: 'Inter var';
+/* @font-face {
+  font-family: "Rubik";
   font-style: italic;
   font-weight: 100 900;
   font-display: block;
-  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
-  font-named-instance: 'Italic';
+  src: url(/fonts/Inter-italic.latin.var.woff2) format("woff2");
+  font-named-instance: "Italic";
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-feature-settings: 'case'1, 'cpsp'1, 'dlig'1, 'cv01'1, 'cv02',
-    'cv03'1, 'cv04'1;
-  font-variation-settings: 'wght'450;
-  font-variant: common-ligatures contextual;
+  font-family: "Rubik", sans-serif;
+  background: #e2eafe73;
+  /* font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  /* 
+    font-feature-settings: "case" 1, "cpsp" 1, "dlig" 1, "cv01" 1, "cv02",
+    "cv03" 1, "cv04" 1;
+    font-variation-settings: "wght" 450;
+    */
   letter-spacing: -0.02em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-variant: common-ligatures contextual;
 }
 
 b,
@@ -79,19 +85,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-variation-settings: 'wght'650;
+  font-variation-settings: "wght" 650;
 }
 
-h1 {
-  font-variation-settings: 'wght'850;
+/* @media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+} */
+
+.tab-link:nth-child(odd) {
+  border-color: #03a9f4;
 }
 
-h2 {
-  font-variation-settings: 'wght'750;
+.tab-link:nth-child(even) {
+  border-color: #ffc107;
+}
+
+.tab-link:nth-child(odd):hover {
+  background: #03a9f4;
+}
+
+.tab-link:nth-child(even):hover {
+  background: #ffc107;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
-screen and (min-resolution: 1.5dppx) {
+  screen and (min-resolution: 1.5dppx) {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -130,11 +150,11 @@ img.blog-grid-banner {
   color: var(--brand);
 }
 
-header {
-  /* backdrop-filter: blur(5px);
+/* header { */
+/* backdrop-filter: blur(5px);
   background: rgba(239, 239, 239, 0.838); */
-  background: #fff;
-}
+/* background: #fff; */
+/* } */
 
 /* .gradient-text {
   background: -webkit-linear-gradient(  var(--brand), blue);
@@ -146,13 +166,13 @@ header {
   background: var(--selection);
 }
 
-.big-home-text-container {
-  /* background-color: #ffffff;
+/* .big-home-text-container { */
+/* background-color: #ffffff;
   background-image: radial-gradient(#0071f311 3px, transparent 0.75px), radial-gradient(#fff 0.75px, #ffffff 0.75px);
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px; */
-  /* background: #f5f5f5de; */
-}
+/* background: #f5f5f5de; */
+/* } */
 
 #hero-subtext {
   line-height: 40px;
@@ -211,7 +231,7 @@ header {
   width: 25px;
 }
 
-.menu-btn>div {
+.menu-btn > div {
   border-radius: 9999px;
   height: 2px;
   margin-bottom: 5px;
@@ -292,7 +312,7 @@ header {
 }
 
 .md-viewer code {
-  background: #FFFAE0;
+  background: #fffae0;
 }
 
 .md-viewer blockquote {
@@ -310,7 +330,7 @@ header {
 } */
 
 .drawer {
-  animation: drawer .2s ease-in-out;
+  animation: drawer 0.2s ease-in-out;
 }
 
 @keyframes drawer {
@@ -322,7 +342,6 @@ header {
     transform: translateY(0);
   }
 }
-
 
 .shimmer {
   animation: shimmer 2s infinite linear;
