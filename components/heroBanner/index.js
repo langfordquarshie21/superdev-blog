@@ -16,7 +16,7 @@ const HeroBanner = () => {
           <h1 className={textStyles.h1}>Want to learn how to code?</h1>
           <br />
           <h2 className={textStyles.h4}>
-            We've got tutorials and resources geared towards self-taught web
+            We&apos;ve got tutorials and resources geared towards self-taught web
             developers. Check it out below!
           </h2>
           <br />
