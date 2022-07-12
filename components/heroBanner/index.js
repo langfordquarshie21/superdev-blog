@@ -72,7 +72,7 @@ const HeroBanner = () => {
 };
 
 const styles = {
-  main: `py-10 pt-32 w-screen mt-[50px] bg-[#8e38ff] text-[#fff] lg:h-[460px] -mt-[75px]`,
+  main: `py-10 pt-32 w-screen mt-[50px] bg-brand text-[#fff] lg:h-[460px] -mt-[75px]`,
   wrapper: `max-w-5xl m-auto px-5 text-center flex items-center justify-center flex-col h-full`,
 };
 
