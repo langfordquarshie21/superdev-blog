@@ -21,7 +21,7 @@ const HeroBanner = () => {
           <br />
           <WhiteButton
             page="https://www.getrevue.co/profile/langford_dev?via=twitter-profile"
-            label="Subscribe to my newsletter"
+            label="Subscribe to a newsletter"
           />
 
           {/* <div className="flex justify-center items-center"> */}
