@@ -13,11 +13,10 @@ const HeroBanner = () => {
     <>
       <div className={styles.main}>
         <div className={styles.wrapper}>
-          <h1 className={textStyles.h1}>Want to learn how to code?</h1>
+          <h1 className={textStyles.h1}>Become a master developer</h1>
           <br />
           <h2 className={textStyles.h4}>
-            We&apos;ve got tutorials and resources geared towards self-taught
-            web developers. Check it out below!
+            Daily articles, tutorials, and courses to help you learn web &amp; software development!
           </h2>
           <br />
           <WhiteButton
@@ -73,7 +72,7 @@ const HeroBanner = () => {
 
 const styles = {
   main: `py-10 pt-32 w-screen mt-[50px] bg-brand text-[#fff] lg:h-[460px] h-[500px] -mt-[75px]`,
-  wrapper: `max-w-5xl m-auto px-5 text-center flex items-center justify-center flex-col h-full`,
+  wrapper: `max-w-4xl m-auto px-5 text-center flex items-center justify-center flex-col h-full`,
 };
 
 export default HeroBanner;
