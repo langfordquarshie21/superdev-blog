@@ -40,11 +40,11 @@ const Header = () => {
           {/* <div className='hidden lg:block'>
                         <SearchInput />
                     </div> */}
-          <div className="lg:hidden flex items-center">
+          {/* <div className="lg:hidden flex items-center">
             <Link href="/search" passHref>
               <Image src={search} alt="search" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </header>
       <HeroBannerElement />

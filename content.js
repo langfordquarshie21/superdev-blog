@@ -1,9 +1,9 @@
 export const navLinks = [
   "Articles",
-  "Snippets",
   "Courses",
-  "Videos",
-  // 'Jobs',
+  "Jobs",
+  // "Snippets",
+  // "Videos",
   // 'Podcasts',
 ];
 

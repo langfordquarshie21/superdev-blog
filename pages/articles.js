@@ -39,6 +39,14 @@ const Articles = () => {
       <BasicLayout meta={defaultMeta}>
         {/* <h2 className={textStyles.h4}>🤩 My recent posts</h2> */}
         {/* <br /> */}
+
+        {/* <div className="px-3 max-w-6xl m-auto my-10 mb-3"> */}
+        {/* </div> */}
+
+        <div className="mb-[100px] -mt-5">
+          <h3 className={textStyles.h4}>📰 Recent posts</h3>
+        </div>
+
         <ul className="grid grid-cols-1 sm:grid-cols-3 -mt-20">
           {posts.map((article, i) => {
             return <BlogCard article={article} key={i} />;

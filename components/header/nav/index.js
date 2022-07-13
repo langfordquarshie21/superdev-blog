@@ -7,7 +7,7 @@ const Nav = () => {
     return (
         <>
             <nav>
-                <ul className='hidden lg:flex items-center justify-between'>
+                <ul className='flex items-center justify-between'>
                     {navLinks.map((link, i) => {
                         return <Link passHref key={i} href={`/${link.toLocaleLowerCase().replace(' ', '-')}`}>
                             <li className={styles.link}>{link}</li>

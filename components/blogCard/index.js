@@ -24,13 +24,15 @@ const BlogCard = ({ article }) => {
               className="rounded-[10px] rounded-b-none"
             />
           </div>
-          <div className="p-5 w-full">
-            <p className="lg:text-xl text-[17px]">{article.title}</p>
+          <div className="w-full px-5 -mb-5">
+            <p className="lg:text-xl font-[500] text-[17px]">
+              {article.title}
+            </p>
           </div>
-          <div className="w-full p-5 pt-0 opacity-60">
-            <p className="multiline--3 lg:-my-5 -my-10">{article.description}</p>
+          <div className="w-full px-5 opacity-60">
+            <p className="multiline--3 text-[18px]">{article.description}</p>
           </div>
-          <div className="w-full opacity-80 text-right p-5 pt-0">
+          <div className="w-full px-5 pb-5 opacity-80 text-right">
             <p>Read more ▶️</p>
           </div>
 

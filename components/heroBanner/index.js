@@ -16,8 +16,8 @@ const HeroBanner = () => {
           <h1 className={textStyles.h1}>Want to learn how to code?</h1>
           <br />
           <h2 className={textStyles.h4}>
-            We&apos;ve got tutorials and resources geared towards self-taught web
-            developers. Check it out below!
+            We&apos;ve got tutorials and resources geared towards self-taught
+            web developers. Check it out below!
           </h2>
           <br />
           <WhiteButton
@@ -72,7 +72,7 @@ const HeroBanner = () => {
 };
 
 const styles = {
-  main: `py-10 pt-32 w-screen mt-[50px] bg-brand text-[#fff] lg:h-[460px] -mt-[75px]`,
+  main: `py-10 pt-32 w-screen mt-[50px] bg-brand text-[#fff] lg:h-[460px] h-[500px] -mt-[75px]`,
   wrapper: `max-w-5xl m-auto px-5 text-center flex items-center justify-center flex-col h-full`,
 };
 
