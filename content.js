@@ -9,16 +9,16 @@ export const navLinks = [
 
 export const tagTabs = [
   "React",
-  "Next.js",
-  "Tailwind CSS",
-  "Blockchain",
-  "HTML",
-  "CSS",
-  "NodeJs",
-  "Web3",
   "JavaScript",
+  "HTML",
+  "Web3",
+  "Next",
+  "Blockchain",
+  "CSS",
   "NFTs",
   "Crypto",
+  // "Tailwind CSS",
+  // "NodeJs",
 ];
 
 export const defaultMeta = {
