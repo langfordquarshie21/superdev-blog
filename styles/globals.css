@@ -156,11 +156,11 @@ img.blog-grid-banner {
 /* background: #fff; */
 /* } */
 
-/* .gradient-text {
-  background: -webkit-linear-gradient(  var(--brand), blue);
+.gradient-text {
+  background: -webkit-linear-gradient(123deg, #ff822d, #ffc107);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+}
 
 ::selection {
   background: var(--selection);

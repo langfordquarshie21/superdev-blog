@@ -13,10 +13,13 @@ const HeroBanner = () => {
     <>
       <div className={styles.main}>
         <div className={styles.wrapper}>
-          <h1 className={textStyles.h1}>Become a master developer</h1>
+          <h1 className={textStyles.h1}>
+            Become a <span className="gradient-text">master</span> developer
+          </h1>
           <br />
           <h2 className={textStyles.h4}>
-            Daily articles, tutorials, and courses to help you learn web &amp; software development!
+            Daily articles, tutorials, and courses to help you learn web &amp;
+            software development!
           </h2>
           <br />
           <WhiteButton
