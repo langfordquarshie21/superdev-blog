@@ -12,7 +12,7 @@ const Footer = () => {
                 <small>&copy; 2022 • All Rights Reserved • superdev</small>
                 <small className="mt-3">Made with 💛 by Langford</small>
                 <div className='flex items-center w-full max-w-[170px] justify-between mt-5'>
-                    <Link passHref target='_blank' href='https://github.com/langfordquarshie21'>
+                    <Link passHref target='_blank' href='https://github.com/langford-dev'>
                         <div className="cursor-pointer opacity-50 hover:opacity-100">
                             <Image src={github} alt='github' />
                         </div>

@@ -37,12 +37,6 @@ const Articles = () => {
     <>
       <Header />
       <BasicLayout meta={defaultMeta}>
-        {/* <h2 className={textStyles.h4}>🤩 My recent posts</h2> */}
-        {/* <br /> */}
-
-        {/* <div className="px-3 max-w-6xl m-auto my-10 mb-3"> */}
-        {/* </div> */}
-
         <div className="mb-[100px] -mt-5">
           <h3 className={textStyles.h4}>📰 Recent posts</h3>
         </div>

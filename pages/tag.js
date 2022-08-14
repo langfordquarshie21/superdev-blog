@@ -5,26 +5,6 @@ import Header from "../components/header"
 import BasicLayout from "../components/layout/basicLayout"
 import BlogCardShimmer from "../components/shimmers/blogCardShimmer"
 
-// export async function getServerSideProps(context) {
-//     const _query = context.query
-//     const _queryValue = Object.keys(_query)
-
-//     const res = await fetch(process.env.NEXT_PUBLIC_SERVER_URL + '/post/get-posts-by-tags', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify(_queryValue)
-//     })
-//     const data = await res.json()
-
-//     if (data.payload) return {
-//         props: { articles: data.payload }
-//     }
-
-//     return {
-//         props: { articles: data }
-//     }
-// }
-
 const Tag = () => {
     const [route, setRoute] = useState()
     const [exist, setExists] = useState(true)

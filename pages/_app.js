@@ -1,25 +1,13 @@
-import Head from 'next/head'
 import { BlogProvider } from '../context/context'
+import ReactGA from 'react-ga';
 import '../styles/globals.css'
+
+const TRACKING_ID = "UA-183754063-1"
+ReactGA.initialize(TRACKING_ID)
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/feed.xml"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </Head> */}
       <BlogProvider>
         <Component {...pageProps} />
       </BlogProvider>
