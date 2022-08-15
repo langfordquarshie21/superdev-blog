@@ -73,7 +73,7 @@ const Read = ({ article }) => {
     setTitle(_title);
     setRawTitle(_rawTitle);
     getSimilarArticles();
-  }, [article, similarArticles]);
+  }, []);
 
   useEffect(() => {
     document.querySelectorAll("pre code").forEach((el) => {
