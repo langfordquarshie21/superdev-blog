@@ -37,13 +37,13 @@ const ReadLayout = ({ children, meta, readLength, timestamp }) => {
       <main className="w-screen">
         <div className="max-w-7xl p-5 m-auto mt-[78px]">
           {/* <div className="max-w-4xl m-auto lg:border lg:border-borderGray lg:p-5 p-0 -mt-10 -mb-5 lg:border-b-0 pt-20"> */}
-          <div className="max-w-4xl m-auto lg:p-5 p-0 -mt-10 -mb-5 pt-20">
-            <div className="-mt-10 lg:mt-5">
+          <div className="max-w-4xl m-auto lg:p-5 p-0">
+            <div className="-mt-7 mb-7">
               <BackButton />
             </div>
-            <h2 className="capitalize font-[500] mt-[60px] text-[30px] lg:text-[60px] mb-10 text-center">
+            <h1 className="capitalize mt-[10px] mb-10 text-center">
               {meta.title.split("-").join(" ")}
-            </h2>
+            </h1>
             {readLength && timestamp ? (
               <p className="mb-[30px] -mt-[20px] opacity-50 text-center">
                 {timestamp} • {readLength} min read

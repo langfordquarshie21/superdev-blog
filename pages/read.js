@@ -116,8 +116,8 @@ const Read = ({ article }) => {
               {article.content}
             </ReactMarkdown>
             <div>
-              <b className="mb-4 block">Find more topics</b>
-              <ul className="flex flex-wrap">
+              {/* <h3 className="mb-4 block">Find more topics</h3> */}
+              <ul className="flex -mt-10 flex-wrap">
                 {article.tags.map((tag, i) => {
                   return (
                     <Link key={i} href={`/tag?${tag}`}>
@@ -129,7 +129,7 @@ const Read = ({ article }) => {
             </div>
             {similarArticles.length > 0 ? (
               <div className="mt-20">
-                <h2>Related posts ➡️</h2>
+                <h3>Related posts ➡️</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 p-0 mt-5">
                   {similarArticles.map((article, i) => {
                     return <BlogCard article={article} key={i} />;
@@ -158,7 +158,7 @@ const Read = ({ article }) => {
 };
 
 const styles = {
-  tag: `border text-[#707070] border-borderGray w-max py-[8px] px-3 rounded-md mr-3 mb-3 text-sm hover:bg-[#000] hover:text-[#fff] cursor-pointer`,
+  tag: `border border-2 w-max py-[8px] px-3 rounded-md mr-3 mb-3 text-sm hover:bg-[#000] hover:text-[#fff] cursor-pointer`,
 };
 
 export default Read;
