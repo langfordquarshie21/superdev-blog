@@ -297,7 +297,7 @@ img.blog-grid-banner {
 .md-viewer video {
   border: 1px solid var(--border-gray);
   border-radius: 10px;
-  width: 100%;
+  min-width: 40%;
 }
 
 .md-viewer pre {
@@ -330,6 +330,7 @@ img.blog-grid-banner {
 .md-viewer h2 {
   margin-top: 50px;
   font-weight: 500;
+  line-height: 50px;
 }
 
 .drawer {
