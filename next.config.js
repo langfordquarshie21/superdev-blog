@@ -3,10 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      'langfordk.hashnode.dev',
-      'res.cloudinary.com',
-    ]
-  }
-}
+      "langfordk.hashnode.dev",
+      "res.cloudinary.com",
+      "localhost",
+      "i9.ytimg.com",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,7 +1,7 @@
 export const navLinks = [
   "Articles",
-  "Courses",
-  "Jobs",
+  "Videos",
+  // "Jobs",
   // "Snippets",
   // "Videos",
   // 'Podcasts',
