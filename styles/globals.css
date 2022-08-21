@@ -11,6 +11,14 @@
   --grey-bg: #f1f1f1ab;
   --border-gray: #eaeaea;
   --secondary: #5f4cf1;
+
+  --green: #25e35f;
+  --blue: #4660fc;
+  --orange: #fda714;
+  --black: #1d1e23;
+  --red1: #fa7e46;
+  --red2: #ff4485;
+
   scroll-behavior: smooth;
 }
 
@@ -94,12 +102,30 @@ h6 {
   }
 } */
 
-.tab-link:nth-child(odd) {
-  border-color: #03a9f4;
+.tab-link {
+  border-width: 2px;
+  color: #000;
+}
+
+.tab-link:nth-child(odd):hover {
+  background: var(--red1);
+  border-color: var(--red1);
+}
+
+.tab-link:nth-child(even):hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: #000;
+}
+
+/* .tab-link:nth-child(odd) {
+  background: var(--blue);
+  border-color: var(--blue);
 }
 
 .tab-link:nth-child(even) {
-  border-color: #ffc107;
+  background: var(--red1);
+  border-color: var(--red1);
 }
 
 .tab-link:nth-child(odd):hover {
@@ -108,7 +134,7 @@ h6 {
 
 .tab-link:nth-child(even):hover {
   background: #ffc107;
-}
+} */
 
 @media screen and (min-device-pixel-ratio: 1.5),
   screen and (min-resolution: 1.5dppx) {
